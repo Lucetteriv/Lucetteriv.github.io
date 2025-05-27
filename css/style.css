@@ -1,0 +1,10 @@
+@import "inc/variables.css";
+@import "../fonts/melodrama/Melodrama_Complete/Fonts/WEB/css/melodrama.css";
+@import "../fonts/nunito/css/nunito.css";
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading);
+}
+
+p{
+    font-family: var(--paragraph);
+}

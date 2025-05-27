@@ -1,0 +1,17 @@
+:root{
+
+    /*colors*/
+    --one : #fec5bb;
+    --two : #fcd5ce;
+    --three : #fae1dd ;
+    --four : #f8edeb;
+    --five : #e8e8e4;
+    --six : #d8e2dc;
+    --seven : #ece4db;
+    --height : #ffe5d9;
+    --nine : #ffd7ba;
+    --ten : #fec89a;
+
+    --heading :  'Melodrama-Medium';
+    --paragraph : 'Nunito';
+}
