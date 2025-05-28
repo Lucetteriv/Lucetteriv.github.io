@@ -1,6 +1,8 @@
 :root{
 
     /*colors*/
+    --background : #fffff8;
+    
     --one : #fec5bb;
     --two : #fcd5ce;
     --three : #fae1dd ;
@@ -14,4 +16,5 @@
 
     --heading :  'Melodrama-Medium';
     --paragraph : 'Nunito';
+    
 }

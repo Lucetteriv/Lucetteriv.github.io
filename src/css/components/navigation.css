@@ -1,0 +1,31 @@
+header{
+    .nav-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 24px 48px;
+
+        .nav-logo {
+            min-width: 64px;
+            min-height: 64px;
+            border-radius: 50%;
+            background-color: lightgray;
+        }
+        
+        .nav-menu{
+            .menu{
+                display: flex;
+                align-items: center;
+                gap: 24px;
+                list-style: none;
+                padding: 0px;
+
+                li{
+                    a{
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}

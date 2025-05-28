@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
@@ -12,37 +12,42 @@
 </head>
 <body>
     <header>
-        <div class="container">
-            <div class="logo">
+        <div class="nav-container">
+            <div class="nav-logo">
                 <img src="" alt="">
             </div>
-            <nav>
-                <div class="menu">
-                    <ul>
-                        <li>
-
-                        </li>
-                        <li>
-
-                        </li>
-                        <li>
-
-                        </li>
-                        <li>
-
-                        </li>
-                    </ul>
-                </div>
-        </nav>
+            <nav class="nav-menu">
+            
+                <ul class="menu">
+                    <li><a href="">item</a></li>
+                    <li><a href="">item</a></li>
+                    <li><a href="">item</a></li>
+                    <li><a href="">item</a></li>
+                </ul>
+            
+            </nav>
         </div>
     </header>
 
     <section id="hero">
         <div class="container">
-            <h1></h1>
-            <h2></h2>
+            <h1>Portfolio Title</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere est nobis quia, eum consequatur voluptate eveniet veniam accusantium, iusto velit id obcaecati cumque mollitia ipsum sapiente incidunt nulla rerum dolorum vel vitae?</p>
             <button></button>
+
+            <div class="container-image">
+                <img src="src/img/photo_lucie-removebg-preview.png" alt="photo de profil">
+                <svg width="373" height="466" viewBox="0 0 373 466" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="path-1-inside-1_24_34" fill="white">
+                    <path d="M186.5 0C210.991 3.21166e-06 235.243 4.82389 257.87 14.1963C280.497 23.5688 301.057 37.3069 318.375 54.625C335.693 71.9431 349.431 92.5027 358.804 115.13C367.729 136.679 372.527 159.701 372.964 183H373V466H0V183H0.0361328C0.473451 159.701 5.27058 136.679 14.1963 115.13C23.5688 92.5027 37.3069 71.9431 54.625 54.625C71.9431 37.3069 92.5027 23.5688 115.13 14.1963C137.757 4.82389 162.009 2.14076e-06 186.5 0Z"/>
+                    </mask>
+                    <path d="M186.5 0C210.991 3.21166e-06 235.243 4.82389 257.87 14.1963C280.497 23.5688 301.057 37.3069 318.375 54.625C335.693 71.9431 349.431 92.5027 358.804 115.13C367.729 136.679 372.527 159.701 372.964 183H373V466H0V183H0.0361328C0.473451 159.701 5.27058 136.679 14.1963 115.13C23.5688 92.5027 37.3069 71.9431 54.625 54.625C71.9431 37.3069 92.5027 23.5688 115.13 14.1963C137.757 4.82389 162.009 2.14076e-06 186.5 0Z" fill="#FEC89A"/>
+                    <path d="M186.5 0V-4V0ZM257.87 14.1963L259.401 10.5008V10.5008L257.87 14.1963ZM318.375 54.625L321.203 51.7966L318.375 54.625ZM358.804 115.13L362.499 113.599V113.599L358.804 115.13ZM372.964 183L368.965 183.075L369.038 187H372.964V183ZM373 183H377V179H373V183ZM373 466V470H377V466H373ZM0 466H-4V470H0V466ZM0 183V179H-4V183H0ZM0.0361328 183V187H3.96176L4.03543 183.075L0.0361328 183ZM14.1963 115.13L10.5008 113.599L10.5008 113.599L14.1963 115.13ZM54.625 54.625L51.7966 51.7966L54.625 54.625ZM115.13 14.1963L113.599 10.5008L113.599 10.5008L115.13 14.1963ZM186.5 0V4C210.466 4 234.198 8.72043 256.339 17.8918L257.87 14.1963L259.401 10.5008C236.288 0.927355 211.517 -4 186.5 -4V0ZM257.87 14.1963L256.339 17.8918C278.481 27.0633 298.6 40.5067 315.547 57.4534L318.375 54.625L321.203 51.7966C303.514 34.1071 282.513 20.0743 259.401 10.5008L257.87 14.1963ZM318.375 54.625L315.547 57.4534C332.493 74.4002 345.937 94.5188 355.108 116.661L358.804 115.13L362.499 113.599C352.926 90.4866 338.893 69.4861 321.203 51.7966L318.375 54.625ZM358.804 115.13L355.108 116.661C363.842 137.747 368.537 160.275 368.965 183.075L372.964 183L376.963 182.925C376.516 159.126 371.617 135.61 362.499 113.599L358.804 115.13ZM372.964 183V187H373V183V179H372.964V183ZM373 183H369V466H373H377V183H373ZM373 466V462H0V466V470H373V466ZM0 466H4V183H0H-4V466H0ZM0 183V187H0.0361328V183V179H0V183ZM0.0361328 183L4.03543 183.075C4.46337 160.275 9.15768 137.747 17.8918 116.661L14.1963 115.13L10.5008 113.599C1.38347 135.61 -3.51647 159.126 -3.96316 182.925L0.0361328 183ZM14.1963 115.13L17.8918 116.661C27.0633 94.5188 40.5067 74.4002 57.4534 57.4534L54.625 54.625L51.7966 51.7966C34.1071 69.4861 20.0743 90.4866 10.5008 113.599L14.1963 115.13ZM54.625 54.625L57.4534 57.4534C74.4002 40.5067 94.5188 27.0633 116.661 17.8918L115.13 14.1963L113.599 10.5008C90.4866 20.0743 69.4861 34.1071 51.7966 51.7966L54.625 54.625ZM115.13 14.1963L116.661 17.8918C138.802 8.72043 162.534 4 186.5 4V0V-4C161.483 -4 136.712 0.927347 113.599 10.5008L115.13 14.1963Z" fill="black" mask="url(#path-1-inside-1_24_34)"/>
+                </svg>
+
+            </div>
         </div>
+
     </section>
     
     <section id="projects">
