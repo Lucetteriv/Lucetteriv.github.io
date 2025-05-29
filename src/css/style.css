@@ -2,16 +2,22 @@
 @import "inc/components.css";
 @import "../fonts/melodrama/Melodrama_Complete/Fonts/WEB/css/melodrama.css";
 @import "../fonts/nunito/css/nunito.css";
+@import "inc/shared.css";
 
 body{
     background-color: var(--background);
+
+        h1{
+            font-size: 4rem;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--heading);
+        }
+
+        p, a, button{
+            font-family: var(--paragraph);
+        }
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: var(--heading);
-}
 
-p, a {
-    font-family: var(--paragraph);
-}
 

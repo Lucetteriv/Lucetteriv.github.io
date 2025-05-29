@@ -1,0 +1,42 @@
+#hero{
+    .container{
+        padding: 24px 7px 24px 48px;
+        justify-content: space-between;
+
+        .container-image{
+            position: relative;
+
+            
+            img {
+                transform: rotateY(180deg);
+            }
+            svg {
+                position: absolute;
+                z-index: -1;
+                bottom: 0;
+                right: 41px;
+            }
+        }
+    }
+}
+
+#projects{
+    .container{
+        text-align: center;
+        flex-direction: column;
+
+        .title-projects{
+            max-width: 800px;
+        }
+
+        .cards-container{
+            gap: 32px;
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1054px;
+            
+            
+        }
+        
+    }
+}
