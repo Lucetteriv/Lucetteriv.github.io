@@ -40,3 +40,39 @@
         
     }
 }
+
+#form{
+    .container{
+        text-align: center;
+        flex-direction: column;
+
+        .title-projects{
+            max-width: 800px;
+        }
+
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        
+    }
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 48px;
+    font-size: 12px;
+
+    a{
+        text-decoration: none;
+        color: black;
+    }
+
+    .social{
+        display: flex;
+        gap: 10px;
+    }
+
+}

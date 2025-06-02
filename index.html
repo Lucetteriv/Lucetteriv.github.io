@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-      <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
     <header>
@@ -52,31 +53,45 @@
     </section>
     
     <section id="projects">
-        <div class="container">
+        <div x-data="{
+            init(){
+                const url = 'src/json/projets.json';
+                
+                fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    this.projects = data.projects
+                    console.log(this.projects)
+                })
+            }
+            
+            }" class="container">
+
+            
+           
+            
+
             <div class="title-projects">
                 <h1>Projets</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum debitis, aspernatur ipsa eum sunt quod doloremque nulla facilis nisi vitae, qui sint cum neque quae voluptate officiis quos commodi tempore!</p>
             </div>
+
+            
+
             <div class="cards-container">
-                <div class="card">
-
-                </div>
-                <div class="card">
-
-                </div>
-                <div class="card">
-
-                </div>
-                <div class="card">
-
-                </div>
-                <div class="card">
-
-                </div>
-                <div class="card">
-
-                </div>
+                <template x-for="project in projects">
+                    <div class="card">
+                        <div class="title-p">
+                            <h4  x-text="project.name"></h4>
+                            <p x-text="project.description"></p>
+                            <a :href="project.link">Voir le projet  <i class="fa-solid fa-arrow-right"></i></a>
+                           
+                        </div>
+                        <img :src="project.image" alt="image">
+                    </div>
+                </template>
             </div>
+            
         </div>
     </section>
     
@@ -89,16 +104,31 @@
 
     <section id="form">
         <div class="container">
-            <form action="">
-                
-            </form>
+            <div class="title-form">
+                <h1>Me contacter</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum debitis, aspernatur ipsa eum sunt quod doloremque nulla facilis nisi vitae, qui sint cum neque quae voluptate officiis quos commodi tempore!</p>
+            </div>
+
+            <a href="mailto:com.lucie.ri@gmail.com"> com.lucie.ri@gmail.com </a>
         </div>
     </section>
     <footer>
+        
+        <div class="social">
+            <i class="fa-brands fa-discord fa-lg"></i>
+            <i class="fa-brands fa-linkedin fa-lg"></i>
 
+        </div>
+
+        <div x-data="{ date: new Date()}">
+            <p x-text = "date.getFullYear()"></p>
+        </div>
+
+        <a href="" download="Lucie-Richard-CV.pdf">Télécharger mon CV</a>
+        <a href="mailto:com.lucie.ri@gmail.com"> Me contacter</a>
     </footer>
 
-     <script>
+    <script>
         AOS.init(); // Initialisation
     </script>
 </body>
