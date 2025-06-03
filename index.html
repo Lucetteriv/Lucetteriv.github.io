@@ -21,9 +21,9 @@
             
                 <ul class="menu">
                     <li><a href="#projects">Projets</a></li>
-                    <li><a href="#tabs" onclick="document.querySelector('#bt-skills').click()">Compétences</a></li>
-                    <li><a href="#tabs" onclick="document.querySelector('#bt-about').click()">A propos</a></li>
-                    <li><a href="#form">Me Contacter</a></li>
+                    <li><a href="#tabs" onclick="document.querySelector('#bt-skills').click()">Skills</a></li>
+                    <li><a href="#tabs" onclick="document.querySelector('#bt-about').click()">À propos</a></li>
+                    <li><a href="#form">Me contacter</a></li>
                 </ul>
             
             </nav>
@@ -61,7 +61,6 @@
                 .then(response => response.json())
                 .then(data => {
                     this.projects = data.projects
-                    console.log(this.projects)
                 })
             }
             
@@ -110,47 +109,75 @@
                 }
             }
         }">
-            <button id="bt-skills" @click="toggle('skills')"> Skills </button>
-            <button id="bt-about" @click="toggle('about')"> About </button>
+        <div class="tabs-bt">
+            <button class="btn" id="bt-skills" @click="toggle('skills')" :class="skills ? 'btn-primary' : '' " > Skills </button>
+            <button class="btn" id="bt-about" @click="toggle('about')" :class="about ? 'btn-primary' : '' "> About </button>
+        </div>
 
             <div class="skills-container" x-show="skills">
-                <div class="grid1">
+                <div class="grid grid1">
                     <h4>Informatique</h4>
-                    <ul>
-                        <li>Pack Office</li>
-                        <li>Création et gestion d'une base de données SQL</li>
-                        <li>Virtualisation Windows et Linux</li>
-                        <li>Création et mise en place d'un serveur web</li>
-                    </ul>
+                    <div class="it-skills">
+                        <div class="it-skill">
+                            <img src="src/img/it-skills.png">
+                        </div>
+                       
+
+                    </div>
+                    
                 </div>
-                <div class="grid2">
-                    <h4>Langage de programmation</h4>
-                    <ul>
-                        <li>C#</li>
-                        <li>HTML/CSS</li>
-                        <li>PHP</li>
-                        <li>Python</li>
-                        <li>JS</li>
-                    </ul>
-                </div>
-                <div class="grid3">
+                <div class="grid grid2">
                     <h4>Langues</h4>
-                    <ul>
-                        <li>Anglais : Intermédiaire</li>
-                        <li>Espagnol : Niveau scolaire</li>
-                        <li>Italien : Notions</li>
-                    </ul>
+                    <div class="languages">
+                        <div class="lang-en">
+                            <img src="src/img/icons8-anglais-100.png" alt="drapeau anglais">
+                        </div>
+                        <div class="lang-es">
+                           <img src="src/img/icons8-espagne-100.png" alt="drapeau espagne">
+                        </div>
+                        <div class="lang-it">
+                            <img src="src/img/icons8-italie-100.png" alt="drapeau italie">
+                        </div>
+                    </div>
                 </div>
-                <div class="grid4">
+                <div class="grid grid3">
+                    <h4>Langage de programmation</h4>
+                    <div class="it-langs">
+                        <div class="it-lang">
+                            <i class="fa-brands fa-html5" style="color: #dc6fc5;"></i>
+                        </div>
+                        <div class="it-lang">
+                            <i class="fa-brands fa-css" style="color: #e1a3d3;"></i>
+                        </div>
+                        <div class="it-lang">
+                            <i class="fa-brands fa-python" style="color: #fdec96;"></i>
+                        </div>
+                        <div class="it-lang">
+                            <img src="src/img/icons8-c-sharp-logo.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid4">
                     <h4>Qualités</h4>
-                    <ul>
-                        <li>Esprit d'équipe</li>
-                        <li>Bonne communication</li>
-                        <li>Facilités/rapidité d'apprentissage</li>
-                        <li>Créativité</li>
-                    </ul>
+                    <div class="qualities">
+                        <div class="quality">
+                            <p>Esprit d'équipe</p>
+                        </div>
+                        <div class="quality">
+                            <p>Bonne communication</p>
+                        </div>
+                    </div>    
+                    <div class="qualities">
+                        <div class="quality">
+                            <p>Facilités/rapidité d'apprentissage</p>
+                        </div>
+                        <div class="quality">
+                            <p>Créativité</p>
+                        </div>
+                    </div>
+                    
                 </div>
-                <div class="grid5">
+                <div class="grid grid5">
                     <h4>Informatique</h4>      
                 </div>
             </div>
@@ -182,19 +209,20 @@
         </div>
     </section>
     <footer>
+        <div x-data="{ date: new Date()}">
+            <p x-text = "date.getFullYear()"></p>
+        </div>
         
+        <div class="footer-links">
+            <a href="" download="Lucie-Richard-CV.pdf">Télécharger mon CV</a>
+            <a href="mailto:com.lucie.ri@gmail.com"> Me contacter</a>
+        </div>
+
         <div class="social">
             <i class="fa-brands fa-discord fa-lg"></i>
             <i class="fa-brands fa-linkedin fa-lg"></i>
 
         </div>
-
-        <div x-data="{ date: new Date()}">
-            <p x-text = "date.getFullYear()"></p>
-        </div>
-
-        <a href="" download="Lucie-Richard-CV.pdf">Télécharger mon CV</a>
-        <a href="mailto:com.lucie.ri@gmail.com"> Me contacter</a>
     </footer>
 
     <script>

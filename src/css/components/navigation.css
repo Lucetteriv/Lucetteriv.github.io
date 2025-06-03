@@ -25,7 +25,7 @@ header{
                 gap: 24px;
                 list-style: none;
                 padding: 0px;
-
+                font-weight: 600;
                 li{
                     a{
                         text-decoration: none;
