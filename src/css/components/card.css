@@ -5,7 +5,6 @@
     background-color: var(--three);
     border-radius: 12px;
     border: 2px solid black;
-
     
     font-family: var(--heading);
     list-style: none;
@@ -30,6 +29,7 @@
 
     img{
         display: flex;
+        object-fit: cover;
         justify-content: space-between;
         align-items: center;
         width: 100%;
@@ -45,4 +45,5 @@
             color: white;
         }
     }
+
 }

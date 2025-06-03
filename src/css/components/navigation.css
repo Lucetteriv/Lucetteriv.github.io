@@ -6,10 +6,16 @@ header{
         padding: 24px 48px;
 
         .nav-logo {
-            min-width: 64px;
-            min-height: 64px;
-            border-radius: 50%;
-            background-color: lightgray;
+            
+            img{
+                max-width: 64px;
+                max-height: 64px;
+                border-radius: 50%;
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
         }
         
         .nav-menu{

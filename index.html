@@ -15,15 +15,15 @@
     <header>
         <div class="nav-container">
             <div class="nav-logo">
-                <img src="" alt="">
+                <img src="src/img/logo.svg.png" alt="logo">
             </div>
             <nav class="nav-menu">
             
                 <ul class="menu">
-                    <li><a href="">item</a></li>
-                    <li><a href="">item</a></li>
-                    <li><a href="">item</a></li>
-                    <li><a href="">item</a></li>
+                    <li><a href="#projects">Projets</a></li>
+                    <li><a href="#tabs" onclick="document.querySelector('#bt-skills').click()">Compétences</a></li>
+                    <li><a href="#tabs" onclick="document.querySelector('#bt-about').click()">A propos</a></li>
+                    <li><a href="#form">Me Contacter</a></li>
                 </ul>
             
             </nav>
@@ -33,9 +33,9 @@
     <section id="hero">
         <div class="container">
             <div class="title">
-                <h1>Portfolio Title</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere est nobis quia, eum consequatur voluptate eveniet veniam accusantium, iusto velit id obcaecati cumque mollitia ipsum sapiente incidunt nulla rerum dolorum vel vitae?</p>
-                <button class="btn btn-primary"> Mes Projets</button>
+                <h1>Portfolio de Lucie</h1>
+                <p>Développeuse Junior</p>
+                <a href="#projects" class="btn btn-primary"> Mes Projets</a>
             </div>
             <div class="container-image">
                 <img src="src/img/photo_lucie-removebg-preview.png" alt="photo de profil">
@@ -72,8 +72,8 @@
             
 
             <div class="title-projects">
-                <h1>Projets</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum debitis, aspernatur ipsa eum sunt quod doloremque nulla facilis nisi vitae, qui sint cum neque quae voluptate officiis quos commodi tempore!</p>
+                <h1>Mes projets</h1>
+                <p>Ici, vous pouvez retrouver mes projets réalisés au cours de mon BTS ainsi que quelques projets personnels.</p>
             </div>
 
             
@@ -95,10 +95,79 @@
         </div>
     </section>
     
-    <section class="tabs">
-        <div class="container">
-            <button></button>
-            <button></button>
+    <section id="tabs">
+        <div class="container" x-data="{
+            skills: true,
+            about: false,
+            toggle(param) {
+                if (param === 'skills' && !this.skills){
+                    this.skills = !this.skills
+                    this.about = false
+                }
+                else if (param === 'about' && !this.about){
+                    this.about = !this.about
+                    this.skills = false
+                }
+            }
+        }">
+            <button id="bt-skills" @click="toggle('skills')"> Skills </button>
+            <button id="bt-about" @click="toggle('about')"> About </button>
+
+            <div class="skills-container" x-show="skills">
+                <div class="grid1">
+                    <h4>Informatique</h4>
+                    <ul>
+                        <li>Pack Office</li>
+                        <li>Création et gestion d'une base de données SQL</li>
+                        <li>Virtualisation Windows et Linux</li>
+                        <li>Création et mise en place d'un serveur web</li>
+                    </ul>
+                </div>
+                <div class="grid2">
+                    <h4>Langage de programmation</h4>
+                    <ul>
+                        <li>C#</li>
+                        <li>HTML/CSS</li>
+                        <li>PHP</li>
+                        <li>Python</li>
+                        <li>JS</li>
+                    </ul>
+                </div>
+                <div class="grid3">
+                    <h4>Langues</h4>
+                    <ul>
+                        <li>Anglais : Intermédiaire</li>
+                        <li>Espagnol : Niveau scolaire</li>
+                        <li>Italien : Notions</li>
+                    </ul>
+                </div>
+                <div class="grid4">
+                    <h4>Qualités</h4>
+                    <ul>
+                        <li>Esprit d'équipe</li>
+                        <li>Bonne communication</li>
+                        <li>Facilités/rapidité d'apprentissage</li>
+                        <li>Créativité</li>
+                    </ul>
+                </div>
+                <div class="grid5">
+                    <h4>Informatique</h4>      
+                </div>
+            </div>
+            <div class="about-container" x-show="about">
+                <div class="about-img">
+                    
+                </div>
+                <div class="title-about">
+                    <h2>A propos</h2>
+                    <p>Je suis Lucie RICHARD étudiante en <strong>BTS SIO</strong> (Services Informatique aux organisations), je me spécialise dans le développement. <br>
+                    Je suis une personne très <strong>créative</strong> et <strong>autonome</strong> avec des <strong>facilités d'apprentissages</strong>. <br> 
+                    Les nouvelles technologies et le développement informatique me passionnent. Je suis curieuse et j'aime me lancer des défis afin d'acquérir de <strong>nouvelles compétences</strong>.<br> 
+                    Je cherche à me spécialiser dans le <strong>développement de sites Web</strong>. Je vous invite à explorer mon portfolio et à consulter mes projets. <br> 
+                    Contactez-moi pour toute question. <br> 
+                    <strong>Merci pour votre visite ! </strong></p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -106,7 +175,7 @@
         <div class="container">
             <div class="title-form">
                 <h1>Me contacter</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum debitis, aspernatur ipsa eum sunt quod doloremque nulla facilis nisi vitae, qui sint cum neque quae voluptate officiis quos commodi tempore!</p>
+                <p>Ici, vous trouverez mes coordonnées pour me contacter</p>
             </div>
 
             <a href="mailto:com.lucie.ri@gmail.com"> com.lucie.ri@gmail.com </a>
