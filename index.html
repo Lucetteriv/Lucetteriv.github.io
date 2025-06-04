@@ -18,14 +18,29 @@
                 <img src="src/img/logo.svg" alt="logo">
             </div>
             <nav class="nav-menu">
-            
+
                 <ul class="menu">
                     <li><a href="#projects">Projets</a></li>
                     <li><a href="#tabs" onclick="document.querySelector('#bt-skills').click()">Skills</a></li>
                     <li><a href="#tabs" onclick="document.querySelector('#bt-about').click()">À propos</a></li>
                     <li><a href="#form">Me contacter</a></li>
                 </ul>
-            
+
+            </nav>
+            <nav x-data="{open: false}" class="nav-menu-mobile">
+                <span @click="open= !open" class="menu-mobile-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </span>
+
+                <div x-show="open" x-transition class="menu-mobile">
+                    <ul class="menu-mobile-list" x-show="open" @click.away="open = false">
+                        <li ><a @click="open = !open" href="#projects">Projets</a></li>
+                        <li ><a @click="open = !open" href="#tabs" onclick="document.querySelector('#bt-skills').click()">Skills</a></li>
+                        <li ><a @click="open = !open" href="#tabs" onclick="document.querySelector('#bt-about').click()">À propos</a></li>
+                        <li ><a @click="open = !open" href="#form">Me contacter</a></li>
+                        <li @click="open = !open"><i class="fa-solid fa-xmark fa-2xl"></i></li>
+                    </ul>
+                </div>
             </nav>
         </div>
     </header>
@@ -51,31 +66,31 @@
         </div>
 
     </section>
-    
+
     <section id="projects">
         <div x-data="{
             init(){
                 const url = 'src/json/projets.json';
-                
+
                 fetch(url)
                 .then(response => response.json())
                 .then(data => {
                     this.projects = data.projects
                 })
             }
-            
+
             }" class="container">
 
-            
-           
-            
+
+
+
 
             <div class="title-projects">
                 <h1>Mes projets</h1>
                 <p>Ici, vous pouvez retrouver mes projets réalisés au cours de mon BTS ainsi que quelques projets personnels.</p>
             </div>
 
-            
+
 
             <div class="cards-container">
                 <template x-for="project in projects">
@@ -84,16 +99,16 @@
                             <h4  x-text="project.name"></h4>
                             <p x-text="project.description"></p>
                             <a :href="project.link">Voir le projet  <i class="fa-solid fa-arrow-right"></i></a>
-                           
+
                         </div>
                         <img :src="project.image" alt="image">
                     </div>
                 </template>
             </div>
-            
+
         </div>
     </section>
-    
+
     <section id="tabs">
         <div class="container" x-data="{
             skills: true,
@@ -121,10 +136,10 @@
                         <div class="it-skill">
                             <img src="src/img/it-skills.png">
                         </div>
-                       
+
 
                     </div>
-                    
+
                 </div>
                 <div class="grid grid2">
                     <h4>Langues</h4>
@@ -142,45 +157,45 @@
                 </div>
                 <div class="grid grid3">
                     <h4>Langage de programmation</h4>
-                  
+
                     <img class="avatar avatar-1" src="src/img/CSS.webp" alt="css">
-                    
+
                     <img class="avatar avatar-2" src="src/img/python.png.png" alt="python">
-                    
+
                     <img class="avatar avatar-3" src="src/img/CSharp.webp" alt="csharp">
-                    
+
                     <img class="avatar avatar-4" src="src/img/JS.webp" alt="javascript">
-                    
+
                     <img class="avatar avatar-5" src="src/img/html.png.png" alt="html">
-                    
+
                 </div>
                 <div class="grid grid4" x-data="{skill1: true,
                         skill2: false,
-                        skill3: false, 
+                        skill3: false,
                         skill4: false}">
                     <h4>Qualités</h4>
                     <span x-show="skill1" x-transition @mouseover="skill2 = true" class="soft-skill skill1"> <span>Esprit d'équipe</span> </span>
                     <span x-show="skill2" x-transition @mouseover="skill3 = true" class="soft-skill"> <span>Bonne communication</span> </span>
                     <span x-show="skill3" x-transition @mouseover="skill4 = true" class="soft-skill"> <span>Créativité</span> </span>
                     <span x-show="skill4" x-transition class="soft-skill"> <span>Facilité/rapidité d'apprentissage</span> </span>
-                    
-                    
+
+
                 </div>
                 <div class="grid grid5">
-                    <h4>Informatique</h4>      
+                    <h4>Informatique</h4>
                 </div>
             </div>
             <div class="about-container" x-show="about">
                 <div class="about-img">
-                    
+
                 </div>
                 <div class="title-about">
                     <h2>A propos</h2>
                     <p>Je suis Lucie RICHARD étudiante en <strong>BTS SIO</strong> (Services Informatique aux organisations), je me spécialise dans le développement. <br>
-                    Je suis une personne très <strong>créative</strong> et <strong>autonome</strong> avec des <strong>facilités d'apprentissages</strong>. <br> 
-                    Les nouvelles technologies et le développement informatique me passionnent. Je suis curieuse et j'aime me lancer des défis afin d'acquérir de <strong>nouvelles compétences</strong>.<br> 
-                    Je cherche à me spécialiser dans le <strong>développement de sites Web</strong>. Je vous invite à explorer mon portfolio et à consulter mes projets. <br> 
-                    Contactez-moi pour toute question. <br> 
+                    Je suis une personne très <strong>créative</strong> et <strong>autonome</strong> avec des <strong>facilités d'apprentissages</strong>. <br>
+                    Les nouvelles technologies et le développement informatique me passionnent. Je suis curieuse et j'aime me lancer des défis afin d'acquérir de <strong>nouvelles compétences</strong>.<br>
+                    Je cherche à me spécialiser dans le <strong>développement de sites Web</strong>. Je vous invite à explorer mon portfolio et à consulter mes projets. <br>
+                    Contactez-moi pour toute question. <br>
                     <strong>Merci pour votre visite ! </strong></p>
                 </div>
             </div>
@@ -201,7 +216,7 @@
         <div x-data="{ date: new Date()}">
             <p x-text = "date.getFullYear()"></p>
         </div>
-        
+
         <div class="footer-links">
             <a href="" download="Lucie-Richard-CV.pdf">Télécharger mon CV</a>
             <a href="mailto:com.lucie.ri@gmail.com"> Me contacter</a>
