@@ -15,7 +15,7 @@
     <header>
         <div class="nav-container">
             <div class="nav-logo">
-                <img src="src/img/logo.svg.png" alt="logo">
+                <img src="src/img/logo.svg" alt="logo">
             </div>
             <nav class="nav-menu">
             
@@ -142,39 +142,28 @@
                 </div>
                 <div class="grid grid3">
                     <h4>Langage de programmation</h4>
-                    <div class="it-langs">
-                        <div class="it-lang">
-                            <i class="fa-brands fa-html5" style="color: #dc6fc5;"></i>
-                        </div>
-                        <div class="it-lang">
-                            <i class="fa-brands fa-css" style="color: #e1a3d3;"></i>
-                        </div>
-                        <div class="it-lang">
-                            <i class="fa-brands fa-python" style="color: #fdec96;"></i>
-                        </div>
-                        <div class="it-lang">
-                            <img src="src/img/icons8-c-sharp-logo.svg" alt="">
-                        </div>
-                    </div>
+                  
+                    <img class="avatar avatar-1" src="src/img/CSS.webp" alt="css">
+                    
+                    <img class="avatar avatar-2" src="src/img/python.png.png" alt="python">
+                    
+                    <img class="avatar avatar-3" src="src/img/CSharp.webp" alt="csharp">
+                    
+                    <img class="avatar avatar-4" src="src/img/JS.webp" alt="javascript">
+                    
+                    <img class="avatar avatar-5" src="src/img/html.png.png" alt="html">
+                    
                 </div>
-                <div class="grid grid4">
+                <div class="grid grid4" x-data="{skill1: true,
+                        skill2: false,
+                        skill3: false, 
+                        skill4: false}">
                     <h4>Qualités</h4>
-                    <div class="qualities">
-                        <div class="quality">
-                            <p>Esprit d'équipe</p>
-                        </div>
-                        <div class="quality">
-                            <p>Bonne communication</p>
-                        </div>
-                    </div>    
-                    <div class="qualities">
-                        <div class="quality">
-                            <p>Facilités/rapidité d'apprentissage</p>
-                        </div>
-                        <div class="quality">
-                            <p>Créativité</p>
-                        </div>
-                    </div>
+                    <span x-show="skill1" x-transition @mouseover="skill2 = true" class="soft-skill skill1"> <span>Esprit d'équipe</span> </span>
+                    <span x-show="skill2" x-transition @mouseover="skill3 = true" class="soft-skill"> <span>Bonne communication</span> </span>
+                    <span x-show="skill3" x-transition @mouseover="skill4 = true" class="soft-skill"> <span>Créativité</span> </span>
+                    <span x-show="skill4" x-transition class="soft-skill"> <span>Facilité/rapidité d'apprentissage</span> </span>
+                    
                     
                 </div>
                 <div class="grid grid5">

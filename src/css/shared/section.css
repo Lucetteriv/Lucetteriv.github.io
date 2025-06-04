@@ -53,10 +53,6 @@
             grid-row-gap: 32px;
             
             .grid{
-                display: flex;
-                justify-content: left;
-                flex-direction: column;
-                align-items: center;
                 border-radius: 12px;
                 border: 2px solid black;
                 padding: 6px 6px 6px 6px ;
@@ -64,6 +60,9 @@
             }
 
             .grid1{
+                display: flex;
+                align-items: center;
+                flex-direction: column;
                 width: 320px;
                 height: 200px;
                 grid-area: 1 / 1 / 2 / 2;
@@ -79,6 +78,9 @@
             }
 
             .grid2{
+                display: flex;
+                align-items: center;
+                flex-direction: column;
                 width: 320px;
                 height: 200px;
                 grid-area: 2 / 1 / 3 / 2;
@@ -95,45 +97,90 @@
             }
 
             .grid3{
+                display: flex;
+                align-items: center;
+                flex-direction: column;
                 width: 320px;
                 max-height: 100%;
                 grid-area: 1 / 2 / 3 / 3;
                 background-color: var(--one);
                 padding: 6px;
+                position: relative;
+                overflow: hidden;
 
-                .it-langs{
+                .avatar{
+                    position: absolute;
+                    width: 200px;
+                    height: auto;
 
-                    .it-lang{
-                        font-size: 64px;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: left;
+                    &.avatar-1{
+                        bottom: -16px;
+                        left: -11px;
+                        z-index: 2;
+                    }
+                    
+                    &.avatar-2{
+                        bottom: 92px;
+                        right: 17px;
+                        z-index: 1;
+                    }
+
+                    &.avatar-3{
+                        bottom: 102px;
+                        left: 17px;
+                        z-index: 1;
+                    }
+                    
+                    &.avatar-4{
+                        bottom: -16px;
+                        right: calc(50% - 115px);
+                        z-index: 3;
+                    }
+
+                    &.avatar-5{
+                        bottom: -28px;
+                        right: -24px;
+                        z-index: 2;
                     }
                 }
             }
 
             .grid4{
+                display: flex;
+                flex-direction: column;
                 width: 320px;
                 height: 200px;
                 grid-area: 1 / 3 / 2 / 4;
                 background-color: var(--six);
                 padding: 6px;
-                
+                gap: 6px;
+                font-family: var(--paragraph);
 
-                .qualities{
-                    display: flex;
-                    gap: 12px;
-                    margin: 12px;
-                    .quality{
-                        border: 2px solid black;
-                        border-radius: 20px;
-                        padding: 2px;
-                    }
+                .soft-skill{
+                    display: inline-flex;
+                }
+                
+                .soft-skill span{
+                    
+                    padding: 2px;
+                    border: 2px solid black;
+                    border-radius: 20px;
+                    
+                }
+
+                .soft-skill:nth-child(odd){
+                    justify-content: right;
+                }
+
+                h4{
+                    text-align: center;
                 }
             }
 
             .grid5{
+                display: flex;
+                align-items: center;
+                flex-direction: column;
                 width: 320px;
                 height: 200px;
                 grid-area: 2 / 3 / 3 / 4;
