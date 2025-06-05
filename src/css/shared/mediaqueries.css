@@ -52,8 +52,34 @@ header {
         .grid3 {
           height:400px;
         }
+
       }
+
+      .about-container{
+        flex-wrap: wrap;
+        padding: 6px;
+        .title-about{
+          padding: 6px;
+          
+          p{
+            text-align: center;
+            margin: 0px 12px;
+          }
+
+          h2{
+            display: flex;
+            justify-content: center;
+          }
+        }
+      }  
     }
   }
 }
+
+footer{
+  flex-direction: column;
+  gap: 24px;
+  padding: 12px;
+
 }
+

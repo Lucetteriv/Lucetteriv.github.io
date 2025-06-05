@@ -10,6 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="src/js/api.js" defer></script>
 </head>
 <body>
     <header>
@@ -94,8 +95,8 @@
 
             <div class="cards-container">
                 <template x-for="project in projects">
-                    <div class="card">
-                        <div class="title-p">
+                    <div class="card" data-aos="zoom-in">
+                        <div class="title-p" >
                             <h4  x-text="project.name"></h4>
                             <p x-text="project.description"></p>
                             <a :href="project.link">Voir le projet  <i class="fa-solid fa-arrow-right"></i></a>
@@ -129,34 +130,50 @@
             <button class="btn" id="bt-about" @click="toggle('about')" :class="about ? 'btn-primary' : '' "> About </button>
         </div>
 
-            <div class="skills-container" x-show="skills">
+            <div class="skills-container" x-show="skills" x-data="{ office:true, virtualBox:true, sql:true, open:false,
+            toggle2(param){
+                if(param === 'office'){
+                    this.office=true, this.virtualBox=false, this.sql=false, this.open=true
+                }
+                if(param === 'virtualBox'){
+                    this.office=false, this.virtualBox=true, this.sql=false, this.open=true
+                }
+                if(param === 'sql'){
+                    this.office=false, this.virtualBox=false, this.sql=true, this.open=true 
+                }
+            },
+            exit(){
+                this.office=true, this.virtualBox=true, this.sql=true, this.open=false
+            }}">
                 <div class="grid grid1">
-                    <h4>Informatique</h4>
                     <div class="it-skills">
-                        <div class="it-skill">
-                            <img src="src/img/it-skills.png">
+                        <div class="office" x-show="office" x-transition @click="toggle2('office')" >
+                            <img src="src/img/pack office.svg">
                         </div>
-
-
+                        <div class="virtualBox" x-show="virtualBox" x-transition @click="toggle2('virtualBox')">
+                            <img src="src/img/virtualBox.svg">
+                        </div>
+                        <div class="sql" x-show="sql" x-transition @click="toggle2('sql')">
+                            <img src="src/img/sql.svg">
+                        </div>
+                        <span class="open" x-show="open" x-transition @click="exit()"><i class="fa-solid fa-xmark fa-2xl"></i></span>
                     </div>
 
                 </div>
                 <div class="grid grid2">
-                    <h4>Langues</h4>
                     <div class="languages">
-                        <div class="lang-en">
-                            <img src="src/img/icons8-anglais-100.png" alt="drapeau anglais">
-                        </div>
-                        <div class="lang-es">
-                           <img src="src/img/icons8-espagne-100.png" alt="drapeau espagne">
-                        </div>
-                        <div class="lang-it">
-                            <img src="src/img/icons8-italie-100.png" alt="drapeau italie">
-                        </div>
+                        
+                        <img class="lang-en" src="src/img/icons8-anglais-100.png" alt="drapeau anglais">
+                        
+                        
+                        <img class="lang-es" src="src/img/icons8-espagne-100.png" alt="drapeau espagne">
+                        
+                        
+                        <img class="lang-it" src="src/img/icons8-italie-100.png" alt="drapeau italie">
+                        
                     </div>
                 </div>
                 <div class="grid grid3">
-                    <h4>Langage de programmation</h4>
 
                     <img class="avatar avatar-1" src="src/img/CSS.webp" alt="css">
 
@@ -173,7 +190,6 @@
                         skill2: false,
                         skill3: false,
                         skill4: false}">
-                    <h4>Qualités</h4>
                     <span x-show="skill1" x-transition @mouseover="skill2 = true" class="soft-skill skill1"> <span>Esprit d'équipe</span> </span>
                     <span x-show="skill2" x-transition @mouseover="skill3 = true" class="soft-skill"> <span>Bonne communication</span> </span>
                     <span x-show="skill3" x-transition @mouseover="skill4 = true" class="soft-skill"> <span>Créativité</span> </span>
@@ -182,7 +198,14 @@
 
                 </div>
                 <div class="grid grid5">
-                    <h4>Informatique</h4>
+                    <img src="src/img/smartguy.png" alt="bonhomme intelligent">
+                    <div class="text">
+                        <blockquote id="citation"></blockquote>
+                        <div>
+                            <p id="author"></p>
+                            <button class="btn" type="button" onclick="getQuote()">Citation <i class="fa-solid fa-arrows-rotate"></i></button>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="about-container" x-show="about">
@@ -214,7 +237,7 @@
     </section>
     <footer>
         <div x-data="{ date: new Date()}">
-            <p x-text = "date.getFullYear()"></p>
+            <span>&copy;</span><span x-text = "date.getFullYear()"></span><span>, Made with ❤️ by Lucette</span>
         </div>
 
         <div class="footer-links">
