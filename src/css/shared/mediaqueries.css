@@ -1,0 +1,85 @@
+header {
+  @media screen and (max-width: 768px) {
+    .nav-container {
+      .nav-menu {
+        display: none;
+      }
+      .nav-menu-mobile {
+        display: block;
+      }
+    }
+  }
+}
+
+#hero {
+  @media screen and (max-width: 768px) {
+    .container {
+      text-align: center;
+      padding: 12px;
+      .container-image {
+        display: none;
+      }
+    }
+  }
+}
+
+#projects {
+  @media screen and (max-width: 768px) {
+    .container {
+      padding: 12px;
+
+      .title-projects {
+        margin-bottom: 24px;
+      }
+      .cards-container {
+        gap: 0px;
+
+        .card {
+          margin-top: -20px;
+        }
+      }
+    }
+  }
+}
+
+#tabs {
+  @media screen and (max-width: 768px) {
+    .container {
+      .skills-container {
+        display: flex;
+        flex-wrap: wrap;
+
+        .grid3 {
+          height:400px;
+        }
+
+      }
+
+      .about-container{
+        flex-wrap: wrap;
+        padding: 6px;
+        .title-about{
+          padding: 6px;
+          
+          p{
+            text-align: center;
+            margin: 0px 12px;
+          }
+
+          h2{
+            display: flex;
+            justify-content: center;
+          }
+        }
+      }  
+    }
+  }
+}
+
+footer{
+  flex-direction: column;
+  gap: 24px;
+  padding: 12px;
+
+}
+

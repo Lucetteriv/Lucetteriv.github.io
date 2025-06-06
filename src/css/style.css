@@ -4,7 +4,11 @@
 @import "../fonts/nunito/css/nunito.css";
 @import "inc/shared.css";
 
+*{
+    scroll-behavior: smooth;
+}
 body{
+    
     background-color: var(--background);
 
         h1{

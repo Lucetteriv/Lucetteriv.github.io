@@ -1,8 +1,17 @@
 .btn{
-    
+    display: inline-block;
     padding: 8px 24px;
     border-radius: 6px;
+    text-decoration: none;
+    color: black;
+    border: 2px solid black;
+    margin-top: 12px;
     &.btn-primary{
         background-color: var(--ten);
     }
 }
+
+.tabs-bt{
+    margin-bottom: 12px;
+}
+
