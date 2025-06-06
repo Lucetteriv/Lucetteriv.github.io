@@ -30,6 +30,7 @@
 
     img{
         display: flex;
+        object-fit: cover;
         justify-content: space-between;
         align-items: center;
         width: 100%;
