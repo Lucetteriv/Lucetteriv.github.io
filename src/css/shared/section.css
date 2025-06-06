@@ -65,7 +65,6 @@
         grid-area: 1 / 1 / 2 / 2;
         background-color: var(--three);
         padding: 6px;
-        
 
         .it-skills {
           display: flex;
@@ -76,15 +75,12 @@
           height: 100%;
           width: 100%;
 
-          span{
+          span {
             position: absolute;
             top: 0px;
             right: 0px;
           }
-          
         }
-
-        
       }
 
       .grid2 {
@@ -99,36 +95,33 @@
 
         .languages {
           display: flex;
-          
 
           .lang-es {
             margin-top: 32px;
             transition: transform 0.3s ease;
           }
-          .lang-es:hover{
+          .lang-es:hover {
             transform: scale(1.1);
-          }
-          
-          .lang-en{
-            transition: transform 0.3s ease;
-            object-fit: none;
-            
           }
 
-          .lang-en:hover{
-            transform: scale(1.1);
-          }
-          
-          .lang-it{
+          .lang-en {
             transition: transform 0.3s ease;
             object-fit: none;
           }
 
-          .lang-it:hover{
+          .lang-en:hover {
+            transform: scale(1.1);
+          }
+
+          .lang-it {
+            transition: transform 0.3s ease;
+            object-fit: none;
+          }
+
+          .lang-it:hover {
             transform: scale(1.1);
           }
         }
-
       }
 
       .grid3 {
@@ -147,7 +140,6 @@
           position: absolute;
           width: 200px;
           height: auto;
-          
 
           &.avatar-1 {
             bottom: -16px;
@@ -156,7 +148,7 @@
             transition: transform 1s ease, box-shadow 0.5s ease;
           }
 
-          &.avatar-1:hover{
+          &.avatar-1:hover {
             transform: translateY(-24px);
           }
 
@@ -167,7 +159,7 @@
             transition: transform 1s ease, box-shadow 0.5s ease;
           }
 
-          &.avatar-2:hover{
+          &.avatar-2:hover {
             transform: translateY(-24px);
           }
 
@@ -178,7 +170,7 @@
             transition: transform 1s ease, box-shadow 0.5s ease;
           }
 
-          &.avatar-3:hover{
+          &.avatar-3:hover {
             transform: translateY(-24px);
           }
 
@@ -189,7 +181,7 @@
             transition: transform 1s ease, box-shadow 0.5s ease;
           }
 
-          &.avatar-4:hover{
+          &.avatar-4:hover {
             transform: translateY(-24px);
           }
 
@@ -200,11 +192,9 @@
             transition: transform 1s ease, box-shadow 0.5s ease;
           }
 
-          &.avatar-5:hover{
+          &.avatar-5:hover {
             transform: translateY(-24px);
           }
-
-          
         }
       }
 
@@ -219,22 +209,16 @@
         gap: 6px;
         font-family: var(--paragraph);
 
-        .soft-skill {
-          display: inline-flex;
-        }
+        .soft-skills {
+          display: flex;
+          justify-content: space-between;
+          height: 100%;
+          align-items: center;
 
-        .soft-skill span {
-          padding: 2px;
-          border: 2px solid black;
-          border-radius: 20px;
-        }
-
-        .soft-skill:nth-child(odd) {
-          justify-content: right;
-        }
-
-        h4 {
-          text-align: center;
+          .up-down {
+            display: flex;
+            flex-direction: column;
+          }
         }
       }
 
@@ -245,21 +229,20 @@
         height: 200px;
         background-color: var(--four);
         padding: 6px;
-        
 
-        blockquote{
+        blockquote {
           font-family: var(--paragraph);
           margin: 0px;
           font-size: 15px;
         }
 
-        img{
+        img {
           position: relative;
           left: -32px;
           bottom: -23px;
         }
 
-        .text{
+        .text {
           display: flex;
           align-items: flex-start;
           flex-direction: column;
@@ -267,7 +250,6 @@
           min-width: calc(50% - 100px);
           margin: 12px 0px;
           justify-content: space-between;
-          
         }
       }
     }
@@ -311,7 +293,7 @@
 }
 
 footer {
-    font-family: var(--paragraph);
+  font-family: var(--paragraph);
   display: flex;
   justify-content: space-between;
   align-items: center;
