@@ -130,37 +130,39 @@
             <button class="btn" id="bt-about" @click="toggle('about')" :class="about ? 'btn-primary' : '' "> About </button>
         </div>
 
-            <div class="skills-container" x-show="skills" x-data="{ office:true, virtualBox:true, sql:true, open:false,
+            <div class="skills-container" x-show="skills" x-data="{ office:true, txtOffice:false, virtualBox:true, txtVB:false, sql:true, txtSQL:false, open:false,
             toggle2(param){
                 if(param === 'office'){
-                    this.office=true, this.virtualBox=false, this.sql=false, this.open=true
+                    this.office=true, this.txtOffice=true, this.virtualBox=false, this.txtVB=false, this.sql=false, this.txtSQL=false, this.open=true
                 }
                 if(param === 'virtualBox'){
-                    this.office=false, this.virtualBox=true, this.sql=false, this.open=true
+                    this.office=false, this.txtOffice=false, this.virtualBox=true, this.txtVB=true, this.sql=false, this.txtSQL=false, this.open=true
                 }
                 if(param === 'sql'){
-                    this.office=false, this.virtualBox=false, this.sql=true, this.open=true
+                    this.office=false, this.txtOffice=false, this.virtualBox=false, this.txtVB=false, this.sql=true, this.txtSQL=true, this.open=true
                 }
             },
             exit(){
-                this.office=true, this.virtualBox=true, this.sql=true, this.open=false
+                this.office=true, this.txtOffice=false, this.virtualBox=true, this.txtVB=false, this.sql=true, this.txtSQL=false, this.open=false
             }}">
-                <div class="grid grid1">
+                <div class="grid grid1" data-aos="fade-right">
                     <div class="it-skills">
-                        <div class="office" x-show="office" x-transition @click="toggle2('office')" >
+                        <div class="office" x-show="office" @click="toggle2('office')" >
                             <img src="src/img/pack office.svg">
+                            <p x-show="txtOffice">Maitrise des applications du Pack office tel que Word, PowerPoint ainsi que quelques connaissances sur Excel</p>
                         </div>
-                        <div class="virtualBox" x-show="virtualBox" x-transition @click="toggle2('virtualBox')">
+                        <div class="virtualBox" x-show="virtualBox" @click="toggle2('virtualBox')">
                             <img src="src/img/virtualBox.svg">
+                            <p x-show="txtVB">Création de machines vituelles Windows et Linux</p>
                         </div>
-                        <div class="sql" x-show="sql" x-transition @click="toggle2('sql')">
+                        <div class="sql" x-show="sql" @click="toggle2('sql')">
                             <img src="src/img/sql.svg">
+                            <p x-show="txtSQL">Création et gestion d'une base de données SQL</p>
                         </div>
-                        <span class="open" x-show="open" x-transition @click="exit()"><i class="fa-solid fa-xmark fa-2xl"></i></span>
+                        <span class="open" x-show="open" @click="exit()"><i class="fa-solid fa-xmark fa-2xl"></i></span>
                     </div>
-
                 </div>
-                <div class="grid grid2">
+                <div class="grid grid2" data-aos="fade-right">
                     <div class="languages">
 
                         <img class="lang-en" src="src/img/icons8-anglais-100.png" alt="drapeau anglais">
@@ -173,7 +175,7 @@
 
                     </div>
                 </div>
-                <div class="grid grid3">
+                <div class="grid grid3" data-aos="fade-up">
 
                     <img class="avatar avatar-1" src="src/img/CSS.webp" alt="css">
 
@@ -186,7 +188,7 @@
                     <img class="avatar avatar-5" src="src/img/html.png.png" alt="html">
 
                 </div>
-                <div class="grid grid4" x-data="{
+                <div class="grid grid4" data-aos="fade-left" x-data="{
                     state: 1,
                     skill1: true,
                     skill2: false,
@@ -226,10 +228,10 @@
 
                     <div class="soft-skills">
                         <div class="soft-skill">
-                            <div x-show="skill1" class="soft-skill-item"> 1</div>
-                            <div x-show="skill2" class="soft-skill-item"> 2</div>
-                            <div x-show="skill3" class="soft-skill-item"> 3</div>
-                            <div x-show="skill4" class="soft-skill-item"> 4</div>
+                            <div x-show="skill1" class="soft-skill-item"> Bonne communication</div>
+                            <div x-show="skill2" class="soft-skill-item"> Facilités d'apprentissage</div>
+                            <div x-show="skill3" class="soft-skill-item"> Esprit d'équipe</div>
+                            <div x-show="skill4" class="soft-skill-item"> Créativité</div>
                         </div>
                         <div class="up-down">
                             <span @click="next('minus')">
@@ -242,7 +244,7 @@
                     </div>
 
                 </div>
-                <div class="grid grid5">
+                <div class="grid grid5" data-aos="fade-left">
                     <img src="src/img/smartguy.png" alt="bonhomme intelligent">
                     <div class="text">
                         <blockquote id="citation"></blockquote>
@@ -298,7 +300,7 @@
     </footer>
 
     <script>
-        AOS.init(); // Initialisation
+        AOS.init({once:true}); // Initialisation
     </script>
 </body>
 </html>

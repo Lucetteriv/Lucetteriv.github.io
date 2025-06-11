@@ -75,6 +75,12 @@
           height: 100%;
           width: 100%;
 
+          .office, .virtualBox, .sql{
+            display: flex;
+            gap: 30px;
+            margin: 8px;
+          }
+          
           span {
             position: absolute;
             top: 0px;
