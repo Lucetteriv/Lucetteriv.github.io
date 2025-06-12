@@ -8,7 +8,6 @@
 <h3 align="center">Portfolio</h3>
 
   <p align="center">
-    Description du projet
     <br />
     <a href="https://github.com/Lucetteriv/Lucetteriv.github.io">Lien vers le site</a>
     &middot;
