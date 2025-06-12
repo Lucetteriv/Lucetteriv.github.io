@@ -45,7 +45,11 @@
 
 ### Créer avec :
 
-* [Alpine.js](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.alpinetoolbox.com%2F&psig=AOvVaw3zHjSqFTC6Ql_XfXv4QE9d&ust=1749802650707000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCNCqv_64640DFQAAAAAdAAAAABAE)
+<a href="https://alpinejs.dev" width="80" height="80">
+  * <img src="https://github.com/user-attachments/assets/178531af-afae-4f90-9f04-978646ba6cf8
+" alt="alpine.js" />
+</a>
+
 * [AOS](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.drupal.org%2Fproject%2Fanimate_on_scroll&psig=AOvVaw1hSgO-qZPatBWAPXBG6HqV&ust=1749802707627000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPCVqZm5640DFQAAAAAdAAAAABAJ)
 * [Html](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngegg.com%2Fen%2Fsearch%3Fq%3Dhtml&psig=AOvVaw3T2b7aOdWb3aZWmE2ilRZE&ust=1749802762056000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJj88bW5640DFQAAAAAdAAAAABAE)
 * [CSS](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.cleanpng.com%2Ffree%2Fcss-logo.html&psig=AOvVaw11-NlcaptWUK2c9YLW5YML&ust=1749802793386000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCNjikcO5640DFQAAAAAdAAAAABAS)
@@ -61,14 +65,14 @@
 
 Grace à ce projet, vous pouvez accéder aux projets que j'ai réalisé et en apprendre un peu plus sur moi.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">retourner en haut</a>)</p>
 
 
 
 <!-- CONTRIBUTING -->
 ### Contributors:
 
-<a href="https://github.com/Thomas-DL">
+<a href="https://github.com/Thomas-DL" width="80" height="80">
   <img src="https://avatars.githubusercontent.com/u/142441996?v=4" alt="contrib.rocks image" />
 </a>
 
@@ -78,7 +82,7 @@ Grace à ce projet, vous pouvez accéder aux projets que j'ai réalisé et en ap
 
 Project Link: [https://github.com/Lucetteriv/Lucetteriv.github.io](https://github.com/Lucetteriv/Lucetteriv.github.io)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">retourner en haut</a>)</p>
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
