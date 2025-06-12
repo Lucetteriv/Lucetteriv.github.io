@@ -43,6 +43,7 @@
 * [AOS](https://michalsnik.github.io/aos/)
 * [Html](https://html.com)
 * [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+* [API.Ninjas](www.api-ninjas.com)
 
 
 
