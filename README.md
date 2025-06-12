@@ -45,14 +45,10 @@
 
 ### Créer avec :
 
-<a href="https://alpinejs.dev" width="80" height="80">
-  * <img src="https://github.com/user-attachments/assets/178531af-afae-4f90-9f04-978646ba6cf8
-" alt="alpine.js" />
-</a>
-
-* [AOS](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.drupal.org%2Fproject%2Fanimate_on_scroll&psig=AOvVaw1hSgO-qZPatBWAPXBG6HqV&ust=1749802707627000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPCVqZm5640DFQAAAAAdAAAAABAJ)
-* [Html](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngegg.com%2Fen%2Fsearch%3Fq%3Dhtml&psig=AOvVaw3T2b7aOdWb3aZWmE2ilRZE&ust=1749802762056000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJj88bW5640DFQAAAAAdAAAAABAE)
-* [CSS](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.cleanpng.com%2Ffree%2Fcss-logo.html&psig=AOvVaw11-NlcaptWUK2c9YLW5YML&ust=1749802793386000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCNjikcO5640DFQAAAAAdAAAAABAS)
+* [Alpine.JS](https://alpinejs.dev)
+* [AOS](https://michalsnik.github.io/aos/)
+* [Html](https://html.com)
+* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
 
 
@@ -72,7 +68,7 @@ Grace à ce projet, vous pouvez accéder aux projets que j'ai réalisé et en ap
 <!-- CONTRIBUTING -->
 ### Contributors:
 
-<a href="https://github.com/Thomas-DL" width="80" height="80">
+<a href="https://github.com/Thomas-DL" max-width="34px" max-height="34px">
   <img src="https://avatars.githubusercontent.com/u/142441996?v=4" alt="contrib.rocks image" />
 </a>
 
