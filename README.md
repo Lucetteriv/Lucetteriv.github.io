@@ -1,9 +1,4 @@
 <!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://github.com/Lucetteriv/Lucetteriv.github.io">
-    <img src="https://www.google.com/imgres?q=portfolio&imgurl=https%3A%2F%2Fwww.library.yorku.ca%2Fds%2Fwp-content%2Fuploads%2F2021%2F07%2Fdigitalportfolio.png&imgrefurl=https%3A%2F%2Fwww.library.yorku.ca%2Fds%2Fhome%2Fmedia-creation-lab%2Fdigital-portfolios%2F&docid=CCpaU9A3eGT7KM&tbnid=n0Cg4OyJMnvgUM&vet=12ahUKEwiy77-tt-uNAxUpUqQEHSu4IP4QM3oECHEQAA..i&w=361&h=360&hcb=2&ved=2ahUKEwiy77-tt-uNAxUpUqQEHSu4IP4QM3oECHEQAA" alt="Logo" width="80" height="80">
-  </a>
 
 <h3 align="center">Portfolio</h3>
 
@@ -67,9 +62,7 @@ Grace à ce projet, vous pouvez accéder aux projets que j'ai réalisé et en ap
 <!-- CONTRIBUTING -->
 ### Contributors:
 
-<a href="https://github.com/Thomas-DL" max-width="34px" max-height="34px">
-  <img src="https://avatars.githubusercontent.com/u/142441996?v=4" alt="contrib.rocks image" />
-</a>
+-   [@Thomas-DL](https://www.github.com/Thomas-DL)
 
 
 <!-- CONTACT -->
