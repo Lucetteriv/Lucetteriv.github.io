@@ -1,47 +1,8 @@
-﻿# A propos du projet
-
-**Mon Projet** est mon propre portfolio réalisé dans un style **Pastel** & **Minimalist**. 
-Le but étant de mettre mon CV sur un site, autant le rendre agréable. 
-
-#Techniques utilisées:
-
-- Alpine JS
-- AOS Library
-
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
-<a id="readme-top"></a>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
-
-
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![project_license][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/Lucetteriv/Lucetteriv.github.io">
-    <img src="Documents\Lucetteriv.github.io\src\img\logo.svg" alt="Logo" width="80" height="80">
+    <img src="https://www.google.com/imgres?q=portfolio&imgurl=https%3A%2F%2Fwww.library.yorku.ca%2Fds%2Fwp-content%2Fuploads%2F2021%2F07%2Fdigitalportfolio.png&imgrefurl=https%3A%2F%2Fwww.library.yorku.ca%2Fds%2Fhome%2Fmedia-creation-lab%2Fdigital-portfolios%2F&docid=CCpaU9A3eGT7KM&tbnid=n0Cg4OyJMnvgUM&vet=12ahUKEwiy77-tt-uNAxUpUqQEHSu4IP4QM3oECHEQAA..i&w=361&h=360&hcb=2&ved=2ahUKEwiy77-tt-uNAxUpUqQEHSu4IP4QM3oECHEQAA" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Portfolio</h3>
@@ -66,38 +27,28 @@ Le but étant de mettre mon CV sur un site, autant le rendre agréable.
         <li><a href="#built-with">Créer avec</a></li>
       </ul>
     </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## A Propos du Projet
 
-Here's a blank template to get started. To avoid retyping too much info, do a search and replace with your text editor for the following: `Lucetteriv`, `Lucetteriv.github.io`, `twitter_handle`, `Lucie RICHARD`, `com.lucie.ri@gmail.com`, `Portfolio de Lucie`
+**Mon projet** est mon propre portfolio. Il a été réalisé avec l'aide de [Thomas-DL](github.com/Thomas-DL) dans un style ***pastel minimaliste***.
 
 <p align="right">(<a href="#readme-top">retourner en haut</a>)</p>
 
 
 
-### Built With
+### Créer avec :
 
-* [![Alpine][Alpine.js]][Alpine-url]
-* [![AOS][AOS.io]][AOS-url]
-* [![Html][Html.com]][Html-url]
-* [![CSS][CSS.com]][CSS-url]
+* [Alpine.js](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.alpinetoolbox.com%2F&psig=AOvVaw3zHjSqFTC6Ql_XfXv4QE9d&ust=1749802650707000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCNCqv_64640DFQAAAAAdAAAAABAE)
+* [AOS](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.drupal.org%2Fproject%2Fanimate_on_scroll&psig=AOvVaw1hSgO-qZPatBWAPXBG6HqV&ust=1749802707627000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPCVqZm5640DFQAAAAAdAAAAABAJ)
+* [Html](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngegg.com%2Fen%2Fsearch%3Fq%3Dhtml&psig=AOvVaw3T2b7aOdWb3aZWmE2ilRZE&ust=1749802762056000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJj88bW5640DFQAAAAAdAAAAABAE)
+* [CSS](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.cleanpng.com%2Ffree%2Fcss-logo.html&psig=AOvVaw11-NlcaptWUK2c9YLW5YML&ust=1749802793386000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCNjikcO5640DFQAAAAAdAAAAABAS)
 
 
 
@@ -108,7 +59,7 @@ Here's a blank template to get started. To avoid retyping too much info, do a se
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Grace a ce projet, vous pouvez accéder aux projets que j'ai réalisé et en apprendre un petit peu plus sur moi.
+Grace à ce projet, vous pouvez accéder aux projets que j'ai réalisé et en apprendre un peu plus sur moi.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -118,7 +69,7 @@ Grace a ce projet, vous pouvez accéder aux projets que j'ai réalisé et en app
 ### Contributors:
 
 <a href="https://github.com/Thomas-DL">
-  <img src="https://contrib.rocks/image?repo=Thomas-DL" alt="contrib.rocks image" />
+  <img src="https://avatars.githubusercontent.com/u/142441996?v=4" alt="contrib.rocks image" />
 </a>
 
 
