@@ -4,7 +4,7 @@
             "name": "Snake Game",
             "description": "Voici un projet réalisé en C++ qui implémente le jeu classique Snake. Le joueur contrôle un serpent qui grandit à chaque fois qu'il mange de la nourriture, tout en évitant de se mordre lui-même ou de toucher les murs.", 
             "date": "date",
-            "image": "src/img/snake.png",
+            "image": "../src/img/snake.PNG",
             "categorie": "categorie",
             "link": "https://github.com/Lucetteriv/Snake"
 
