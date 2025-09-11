@@ -88,4 +88,9 @@ thead tr th:first-child {
     border-bottom-right-radius: 10px;
   }
 
+  pre{
+    display: flex;
+    align-items: center;
+  }
+
 
