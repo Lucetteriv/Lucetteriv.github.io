@@ -1,0 +1,63 @@
+{
+    "projects" : [
+        {
+            "id": "1",
+            "name": "Snake Game",
+            "description": "Voici un projet réalisé en C++ qui implémente le jeu classique Snake. Le joueur contrôle un serpent qui grandit à chaque fois qu'il mange de la nourriture, tout en évitant de se mordre lui-même ou de toucher les murs.", 
+            "date": "date",
+            "image": "../src/img/snake.PNG",
+            "categorie": "categorie",
+            "link": "../src/img/",
+            "skills": 
+            {
+                "skill1": true ,
+                "skill2": false , 
+                "skill3": false ,
+                "skill4": true , 
+                "skill5": false ,
+                "skill6": false
+            }
+            
+        },
+
+        {
+            "id": "2",
+            "name": "Pokemon TCG",
+            "description": "Ce projet est une application web qui permet aux utilisateurs de parcourir et de d'ouvrir des booster de cartes Pokémon. L'application utilise l'API PokéAPI pour récupérer les données des cartes et les afficher de manière attrayante.", 
+            "date": "date",
+             "image": "../src/img/pokemon.PNG",
+            "categorie": "categorie",
+            "link": "../src/img/booster.webm",
+           "skills": 
+            {
+                "skill1": false ,
+                "skill2": true , 
+                "skill3": false ,
+                "skill4": true , 
+                "skill5": false ,
+                "skill6": false
+            }
+        },
+
+        {
+            "id": "3",
+            "name": "CrazyQuiz",
+            "description": "Ce projet est un site web de quiz interactif. Les utilisateurs peuvent répondre à une série de questions à choix multiples et obtenir un resultat à la fin. Le site est conçu pour être amusant et éducatif.", 
+            "date": "date",
+             "image": "../src/img/quiz.png",
+            "categorie": "categorie",
+            "link": "../src/img/quizz.webm",
+            "skills": 
+            {
+               "skill1": false ,
+                "skill2": true , 
+                "skill3": false ,
+                "skill4": true , 
+                "skill5": false,
+                "skill6": false
+            }
+        }
+
+        
+    ]
+}
