@@ -24,6 +24,16 @@ body{
         }
 }
 
+#hero .title{
+ transform:translatex(270px) translatey(77px);
+}
+
+#hero .container-image{
+ display:inline-block;
+ transform:translatex(-169px) translatey(-24px);
+}
+
+
 table{
     
     border-collapse: separate;
@@ -32,7 +42,24 @@ table{
     min-width: 600px;
     border-radius: 10px;
     padding-top: 60px;
+    margin-left:0px;
+    min-width:70%;
+    transform:translatex(219px) translatey(28px);
     
+  }
+
+  #projects .table-container{
+    transform:translatex(0px) translatey(0px);
+  }
+
+  #projects .container .table-container table{
+   width:71% !important;
+  }
+
+  section pre{
+    transform:translatex(266px) translatey(-7px);
+    padding-left:0px;
+    width:1134px;
   }
 
   tr:first-child td:first-child{
