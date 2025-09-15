@@ -120,4 +120,13 @@ thead tr th:first-child {
     align-items: center;
   }
 
+  #projects table{
+    transform:translatex(166px) translatey(14px);
+   }
+   
+   /* Preformatted */
+   section pre{
+    transform:translatex(127px) translatey(0px);
+   }
+
 
