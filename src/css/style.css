@@ -5,128 +5,322 @@
 @import "inc/shared.css";
 @import "../css/shared/mediaqueries.css";
 
-*{
+* {
     scroll-behavior: smooth;
 }
-body{
-    
+
+[x-cloak] { display: none !important; }
+
+body {
     background-color: var(--background);
-
-        h1{
-            font-size: 4rem;
-        }
-        h1, h2, h3, h4, h5, h6 {
-            font-family: var(--heading);
-        }
-
-        p, a, button{
-            font-family: var(--paragraph);
-        }
 }
 
-#hero .title{
- transform:translatex(270px) translatey(77px);
+body h1 { font-size: 4rem; }
+
+body h1, body h2, body h3, body h4, body h5, body h6 {
+    font-family: var(--heading);
 }
 
-#hero .container-image{
- display:inline-block;
- transform:translatex(-169px) translatey(-24px);
+body p, body a, body button {
+    font-family: var(--paragraph);
 }
 
+/* --- HERO SECTION --- */
+#hero .title {
+    transform: translatex(270px) translatey(77px);
+}
 
-table{
-    
+#hero .container-image {
+    display: inline-block;
+    transform: translatex(-169px) translatey(-24px);
+}
+
+/* --- TABLEAU (ALIGNEMENT & STYLE) --- */
+.table-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 24px 155px; /* Padding conservé selon ton code */
+}
+
+table {
     border-collapse: separate;
     border-spacing: 0; 
     width: 100%;
-    min-width: 600px;
+    max-width: 1200px;
+    background: white;
     border-radius: 10px;
-    padding-top: 60px;
-    margin-left:0px;
-    min-width:70%;
-    transform:translatex(219px) translatey(28px);
-    
-  }
+    margin-top: 60px;
+}
 
-  #projects .table-container{
-    transform:translatex(0px) translatey(0px);
-  }
-
-  #projects .container .table-container table{
-   width:71% !important;
-  }
-
-  section pre{
-    transform:translatex(266px) translatey(-7px);
-    padding-left:0px;
-    width:1134px;
-  }
-
-  tr:first-child td:first-child{
-    border-bottom-left-radius: 10px;
-  }
-
-  td {
+th, td {
+    padding: 12px;
     border: 1px solid rgba(0, 0, 0, 0.5);
-    padding: 10px;
     text-align: center;
-    font-family: var(--paragraph);
-  }
+}
 
-  th {
+th {
     background-color: var(--nine);
-    border: 1px solid rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    text-align: center;
     font-family: var(--heading);
-  }
+}
 
-  tr:hover {
+td {
+    font-family: var(--paragraph);
+}
+
+tr:hover {
     background-color: var(--four);
-  }
+}
 
-  input[type="checkbox"]:disabled{
+/* Arrondis des coins du tableau */
+thead tr th:first-child { border-top-left-radius: 10px; }
+thead tr th:last-child { border-top-right-radius: 10px; }
+tbody tr:last-child td:first-child { border-bottom-left-radius: 10px; }
+tbody tr:last-child td:last-child { border-bottom-right-radius: 10px; }
+
+/* Checkbox */
+input[type="checkbox"]:disabled {
     transform: scale(1.2);
     cursor: not-allowed; 
-  }
+}
 
-  @media (max-width: 600px) {
-    table, thead, tbody, th, td, tr {
-      font-size: 14px;
+/* --- PREFORMATTED / TEXT --- */
+pre {
+    display: flex;
+    align-items: center;
+}
+
+section pre {
+    transform: translatex(127px) translatey(0px);
+    width: 1134px;
+}
+
+/* --- MODALE (STRUCTURE & OVERLAY) --- */
+.custom-modal-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.custom-modal-blur {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.custom-modal-container {
+    position: relative;
+    background: #fff;
+    width: 90vw;
+    max-width: 1100px;
+    height: 60vh;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* Modale Content */
+.custom-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    border-bottom: 1px solid #eee;
+}
+
+.custom-modal-content {
+    display: flex;
+    flex: 1;
+    overflow-y: auto;
+    min-height: 0;
+}
+
+/* Galerie Modale */
+.custom-modal-gallery {
+    flex: 2;
+    background: #111;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 450px;
+    position: relative;
+}
+
+.custom-gallery-main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Animation Image Gallery */
+.gallery-img-animated {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 1;
+    transform: scale(1);
+}
+
+.img-hidden {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+    filter: blur(5px);
+}
+
+/* Info Modale */
+.custom-modal-info {
+    flex: 1;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #fff;
+    border-left: 1px solid #eee;
+    overflow-y: auto;
+}
+
+/* --- BOUTONS --- */
+.custom-close-btn {
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #333;
+}
+
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.2);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 0.3s;
+    z-index: 10;
+}
+
+.nav-arrow:hover { background: rgba(255,255,255,0.4); }
+.nav-arrow.left { left: 10px; }
+.nav-arrow.right { right: 10px; }
+
+.custom-btn-primary, .custom-btn-outline {
+    display: block;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: filter 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.custom-btn-primary { background-color: var(--nine); }
+.custom-btn-outline { background-color: var(--seven); border: 1px solid #ccc; }
+
+.custom-btn-primary:hover, .custom-btn-outline:hover {
+    filter: brightness(0.9);
+}
+
+/* --- RESPONSIVE --- */
+
+/* Mobile Table (Card View) */
+@media screen and (max-width: 900px) {
+    thead { display: none; }
+    
+    tr {
+        display: block;
+        margin-bottom: 20px;
+        border: 2px solid var(--one);
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    td, th {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: right;
+        border: none;
+        border-bottom: 1px solid #eee;
+        padding: 10px 5px;
+    }
+
+    td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        text-align: left;
+        font-size: 0.8rem;
+        flex: 1;
+        padding-right: 10px;
     }
 }
 
-.table-container{
-    padding: 24px 155px 24px 155px ;
+/* Mobile General & Modale */
+@media (max-width: 850px) {
+    .custom-modal-content { flex-direction: column; }
+    .custom-modal-gallery { min-height: 300px; }
+    .table-container { padding: 24px 20px; }
 }
 
-thead tr th:first-child {
-    border-top-left-radius: 10px;
-  }
-  thead tr th:last-child {
-    border-top-right-radius: 10px;
-  }
-  
-  /* Arrondir les coins du footer */
-  tbody tr:last-child td:first-child {
-    border-bottom-left-radius: 10px;
-  }
-  tbody tr:last-child td:last-child {
-    border-bottom-right-radius: 10px;
-  }
+@media (max-width: 600px) {
+    table, thead, tbody, th, td, tr { font-size: 14px; }
+}
 
-  pre{
-    display: flex;
-    align-items: center;
-  }
+/* separateur*/
+.separator-design {
+    display: flex;       /* Aligne les éléments horizontalement */
+    align-items: center; /* Centre verticalement les traits et le carré */
+    text-align: center;
+    margin: 60px auto;   /* Espacement haut/bas, centrage horizontal */
+    width: 80%;          /* Largeur totale de la ligne de séparation */
+    max-width: 1000px;   /* Limite pour les grands écrans */
+}
 
-  #projects table{
-    transform:translatex(166px) translatey(14px);
-   }
-   
-   /* Preformatted */
-   section pre{
-    transform:translatex(127px) translatey(0px);
-   }
+/* Les deux traits (Gauche et Droite) */
+.separator-design::before,
+.separator-design::after {
+    content: "";
+    flex: 1;             /* Chaque trait prend tout l'espace disponible */
+    height: 1px;         /* Épaisseur du trait */
+    background: rgba(0, 0, 0, 0.2); /* Couleur grise discrète */
+}
 
+/* Le trait de Gauche (dégradé entrant) */
+.separator-design::before {
+    background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.4));
+    margin-right: 20px;   /* Espace fixe avant le carré */
+}
 
+/* Le trait de Droite (dégradé sortant) */
+.separator-design::after {
+    background-image: linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,0.4));
+    margin-left: 20px;    /* Espace fixe après le carré */
+}
+
+/* Le Carré Central Stylisé */
+.separator-square {
+    display: inline-block;
+    width: 12px;          /* Taille du carré */
+    height: 12px;
+    background-color: black; /* Utilise ta variable de couleur */
+    transform: rotate(45deg);     /* Tourne le carré pour faire un losange */
+}
