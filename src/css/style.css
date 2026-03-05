@@ -321,6 +321,14 @@ section pre {
     display: inline-block;
     width: 12px;          /* Taille du carré */
     height: 12px;
-    background-color: black; /* Utilise ta variable de couleur */
+    background-color: black; 
     transform: rotate(45deg);     /* Tourne le carré pour faire un losange */
 }
+
+/* Empêche le conteneur de s'écraser avant le chargement des projets */
+.cards-container {
+    min-height: 300px; 
+    display: grid;
+}
+
+

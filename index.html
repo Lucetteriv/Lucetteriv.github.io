@@ -92,7 +92,7 @@
             </div>
             
             <div>
-                <h2>1ère année de BTS SIO</h1> 
+                <h2>1ère année de BTS SIO</h2> 
 
                 <div class="cards-container">
                     <template x-for="project in getProjectsByDate(2)" :key="project.id">
@@ -114,7 +114,7 @@
                 </div>
             </div>
             <div>
-                <h2>Stage de 1ère année de BTS SIO</h1> 
+                <h2>Stage de 1ère année de BTS SIO</h2> 
 
                 <div class="cards-container">
                     <template x-for="project in getProjectsByDate(2)" :key="project.id">
@@ -136,7 +136,7 @@
                 </div>
             </div>
             <div>
-                <h2>2ème année de BTS SIO</h1> 
+                <h2>2ème année de BTS SIO</h2> 
 
                 <div class="cards-container">
                     <template x-for="project in getProjectsByDate(2)" :key="project.id">
@@ -158,7 +158,7 @@
                 </div>
             </div>
             <div>
-                <h2>Stage de 2ème année de BTS SIO</h1> 
+                <h2>Stage de 2ème année de BTS SIO</h2> 
 
                 <div class="cards-container">
                     <template x-for="project in getProjectsByDate(2)" :key="project.id">
@@ -182,15 +182,18 @@
             
             <div class="table-responsive-wrapper" x-data="{
                 project: [],
-                init(){
-                    const url = 'src/json/projets.json';
-    
-                    fetch(url)
-                    .then(response => response.json())
-                    .then(data => {
-                        this.projects = data.projects
-                    })
-                    .catch(error => console.error('Erreur de chargement:, error'));
+                init() {
+                    fetch('src/json/projets.json')
+                        .then(response => response.json())
+                        .then(data => {
+                            this.projects = data.projects;
+                            
+                            // On attend que Alpine ait fini de dessiner les cartes
+                            this.$nextTick(() => {
+                                AOS.refresh(); 
+                            });
+                        })
+                        .catch(error => console.error('Erreur de chargement:', error));
                 },
                 toggleSkill(Project, skill) {
 
