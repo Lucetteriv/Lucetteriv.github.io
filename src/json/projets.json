@@ -11,7 +11,6 @@
                 "https://i0.wp.com/picjumbo.com/wp-content/uploads/silhouettes-of-hawaiian-palms-at-a-gorgeous-sunset-free-image.jpeg?h=800&quality=80",
                 "https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png"
             ],
-            "categorie": "categorie",
             "link": "https://github.com/Lucetteriv/Snake",
             "skills": 
             {
@@ -24,6 +23,7 @@
             }
             
         },
+ 
 
         {
             "id": "2",
@@ -31,11 +31,11 @@
             "description": "Ce projet est une application web qui permet aux utilisateurs de parcourir et de d'ouvrir des booster de cartes Pokémon. L'application utilise l'API PokéAPI pour récupérer les données des cartes et les afficher de manière attrayante.", 
             "date": "2",
              "image": "../src/img/pokemon.png",
-            "categorie": "categorie",
             "gallery": [
-                "https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png",
-                "https://i0.wp.com/picjumbo.com/wp-content/uploads/silhouettes-of-hawaiian-palms-at-a-gorgeous-sunset-free-image.jpeg?h=800&quality=80",
-                "https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png"
+                "src/img/booster-connect.PNG", 
+                "src/img/booster-open.PNG", 
+                "src/img/booster-collec.PNG",
+                "src/img/filtre-booster.PNG"
             ],
             "link": "https://github.com/Lucetteriv/booster-card",
            "skills": 
@@ -55,11 +55,86 @@
             "description": "Ce projet est un site web de quiz interactif. Les utilisateurs peuvent répondre à une série de questions à choix multiples et obtenir un resultat à la fin. Le site est conçu pour être amusant et éducatif.", 
             "date": "2",
             "image": "../src/img/quiz.png",
-            "categorie": "categorie",
             "gallery": [
-                "https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png",
-                "https://i0.wp.com/picjumbo.com/wp-content/uploads/silhouettes-of-hawaiian-palms-at-a-gorgeous-sunset-free-image.jpeg?h=800&quality=80",
-                "https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png"
+                "src/img/quiz-crea.png",
+                "src/img/quiz-prog.png",
+                "src/img/quiz-quest.png",
+                "src/img/quiz-rep.png"
+            ],
+            "link": "https://github.com/Lucetteriv/CrazyQuizzJS",
+            "skills": 
+            {
+                "skill1": false ,
+                "skill2": true , 
+                "skill3": false ,
+                "skill4": true , 
+                "skill5": false,
+                "skill6": false
+            }
+        },
+        {
+            "id": "4",
+            "name": "GestMegots",
+            "description": "Ce projet est une application client lourd réalisée en C# qui permet de suivre l'activitée des cendriers publics dans la ville de Laon en gérant les employés, les collectes, les lieux de collectes...", 
+            "date": "3",
+                "image": "../src/img/pokemon.png",
+            "gallery": [
+                "src/img/booster-connect.PNG", 
+                "src/img/booster-open.PNG", 
+                "src/img/booster-collec.PNG",
+                "src/img/filtre-booster.PNG"
+            ],
+            "link": "https://github.com/Lucetteriv/booster-card",
+            "skills": 
+            {
+                "skill1": true ,
+                "skill2": true , 
+                "skill3": false ,
+                "skill4": false , 
+                "skill5": true ,
+                "skill6": true
+            }
+        },
+
+       
+        {
+            "id": "5",
+            "name": "GestEmploye",
+            "description": "Voici un projet réalisé en C++ qui implémente le jeu classique Snake. Le joueur contrôle un serpent qui grandit à chaque fois qu'il mange de la nourriture, tout en évitant de se mordre lui-même ou de toucher les murs.", 
+            "date": "1",
+            "image": "../src/img/interface_diplome_gestemployees.png",
+            "gallery": [
+                "src/img/interface_employe_gestemployees.png",
+                "src/img/interface_diplome_gestemployees.png", 
+                "src/img/interface_service_gestemployees.png"
+            ],
+            "link": "https://github.com/Lucetteriv/Snake",
+            "skills": 
+            {
+                "skill1": false ,
+                "skill2": false , 
+                "skill3": false ,
+                "skill4": false , 
+                "skill5": true ,
+                "skill6": true
+            }
+            
+        },
+
+        {
+            "id": "6",
+            "name": "La Plantation",
+            "description": "Ce projet est un site e-commerce dans lequel j'ai ajouté une notion de colisage pour les articles coté admin et client", 
+            "date": "4",
+            "image": "../src/img/laplantation.png",
+            "gallery": [
+                "src/img/colisage1.png",
+                "src/img/colisage2.png", 
+                "src/img/colisage3.png",
+                "src/img/colisage4.png",
+                "src/img/colisage5.png"
+
+
             ],
             "link": "https://github.com/Lucetteriv/CrazyQuizzJS",
             "skills": 
@@ -72,18 +147,20 @@
                 "skill6": false
             }
         },
-
         {
-            "id": "4",
-            "name": "GestMegots",
-            "description": "Ce projet est une application client lourd réalisée en C# qui permet de suivre l'activitée des cendriers publics dans la ville de Laon en gérant les employés, les collectes...", 
-            "date": "2024",
-            "image": "../src/img/quiz.png",
-            "categorie": "categorie",
+            "id": "7",
+            "name": "Geripro",
+            "description": "Ce projet est un site de gestion d'entreprise dans laquelle j'ai ajouté un module de demande de remboursement pour les salarie et une gestion des demandes ainsi qu'une gestion de messages types pour l'administration", 
+            "date": "4",
+            "image": "../src/img/fg.png",
             "gallery": [
-                "https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png",
-                "https://i0.wp.com/picjumbo.com/wp-content/uploads/silhouettes-of-hawaiian-palms-at-a-gorgeous-sunset-free-image.jpeg?h=800&quality=80",
-                "https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png"
+                "src/img/fg1.png",
+                "src/img/fg2.png", 
+                "src/img/fg3.png",
+                "src/img/fg4.png",
+                "src/img/fg5.png"
+
+
             ],
             "link": "https://github.com/Lucetteriv/CrazyQuizzJS",
             "skills": 
@@ -95,8 +172,49 @@
                 "skill5": false,
                 "skill6": false
             }
+        },
+        {
+            "id": "8",
+            "name": "Le Monde Est Vache",
+            "description": "Ce projet est un site e-commerce realiser entierement en HTML/CSS avec l'aide de bootstrap ", 
+            "date": "1",
+            "image": "../src/img/LOGO_LMEV.png",
+            "gallery": [
+                "src/img/cahier_des_charges_lmev_2.png",
+                "src/img/cahier_des_charges_lmev_1.png"
+            ],
+            "link": "https://github.com/Lucetteriv/CrazyQuizzJS",
+            "skills": 
+            {
+               "skill1": true ,
+                "skill2": true , 
+                "skill3": true ,
+                "skill4": true , 
+                "skill5": true,
+                "skill6": true
+            }
+        },
+        {
+            "id": "9",
+            "name": "Portfolio",
+            "description": "Ce projet est un site e-commerce realiser entierement en HTML/CSS avec l'aide de bootstrap ", 
+            "date": "2",
+            "image": "../src/img/portfolio.png",
+            "gallery": [
+                "src/img/cahier_des_charges_lmev_2.png",
+                "src/img/cahier_des_charges_lmev_1.png"
+            ],
+            "link": "https://github.com/Lucetteriv/CrazyQuizzJS",
+            "skills": 
+            {
+               "skill1": true ,
+                "skill2": false , 
+                "skill3": true ,
+                "skill4": false , 
+                "skill5": true,
+                "skill6": true
+            }
         }
-
         
     ]
 }

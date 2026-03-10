@@ -6,12 +6,75 @@
     color: black;
     border: 2px solid black;
     margin-top: 12px;
-    &.btn-primary{
-        background-color: var(--ten);
+
+    a{
+        text-decoration: none;
+        color: inherit;   
     }
 }
 
-.tabs-bt{
+.btn.btn-primary{
+    background-color: var(--ten);
+}
+
+.tabs-bt {
     margin-bottom: 12px;
+}
+
+
+/* Conteneur du menu */
+.portfolio-tabs-bt{
+    display:flex;
+    justify-content:center; /* centre les onglets */
+    align-items:center;
+    gap:30px;
+
+    width:100%;
+    max-width:800px; /* largeur max */
+    margin:0 auto 40px auto; /* centre horizontal + espace avec le contenu */
+
+    padding-bottom:12px;
+    border-bottom:2px solid #e5e5e5; /* barre indépendante */
+}
+
+/* Boutons */
+.portfolio-tabs-bt button{
+    position:relative;
+    padding:10px 16px;
+    border:none;
+    background:none;
+    font-size:16px;
+    cursor:pointer;
+    color:#777;
+    transition:0.3s;
+}
+
+/* Hover */
+.portfolio-tabs-bt button:hover{
+    color:black;
+}
+
+/* Onglet actif */
+.portfolio-tabs-bt button.active{
+    color:black;
+    font-weight:600;
+}
+
+/* Barre sous l'onglet */
+.portfolio-tabs-bt button::after{
+    content:"";
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    bottom:-14px;
+    width:0%;
+    height:3px;
+    background:var(--ten);
+    transition:0.3s;
+}
+
+/* Barre active */
+.portfolio-tabs-bt button.active::after{
+    width:60%;
 }
 

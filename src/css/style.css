@@ -206,8 +206,8 @@ section pre {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(255,255,255,0.2);
-    color: white;
+    background: var(--four);
+    color: var(--two);
     border: none;
     padding: 15px;
     cursor: pointer;
@@ -331,4 +331,19 @@ section pre {
     display: grid;
 }
 
+.ascii-art {
+    display: flex;
+    justify-content: center; /* centre horizontalement */
+    align-items: center;     /* centre verticalement */
+    min-height: 400px;       /* ou la hauteur que tu veux */
+}
 
+.ascii-art pre {
+    white-space: pre;        /* garde les espaces et retours */
+}
+
+.title-veille {
+    width: 100%;          /* prend toute la largeur */
+    text-align: center;   /* centre le titre */
+    margin-bottom: 20px;
+}

@@ -22,8 +22,9 @@
 
                 <ul class="menu">
                     <li><a href="#projects">Projets</a></li>
-                    <li><a href="#tabs" onclick="document.querySelector('#bt-skills').click()">Skills</a></li>
+                    <li><a href="#tabs" onclick="document.querySelector('#bt-skills').click()">Compétences</a></li>
                     <li><a href="#tabs" onclick="document.querySelector('#bt-about').click()">À propos</a></li>
+                    <li><a href="#veille">Veille technologique</a></li>
                     <li><a href="#form">Me contacter</a></li>
                 </ul>
 
@@ -38,6 +39,7 @@
                         <li ><a @click="open = !open" href="#projects">Projets</a></li>
                         <li ><a @click="open = !open" href="#tabs" onclick="document.querySelector('#bt-skills').click()">Skills</a></li>
                         <li ><a @click="open = !open" href="#tabs" onclick="document.querySelector('#bt-about').click()">À propos</a></li>
+                        <li><a href="#veille">Veille technologique</a></li>
                         <li ><a @click="open = !open" href="#form">Me contacter</a></li>
                         <li @click="open = !open"><i class="fa-solid fa-xmark fa-2xl"></i></li>
                     </ul>
@@ -91,94 +93,94 @@
                 <p>Ici, vous pouvez retrouver mes projets réalisés au cours de mon BTS ainsi que quelques projets personnels.</p>
             </div>
             
-            <div>
-                <h2>1ère année de BTS SIO</h2> 
+            <div x-data="{ activeTab: 'annee1' }">
 
-                <div class="cards-container">
-                    <template x-for="project in getProjectsByDate(2)" :key="project.id">
-                        <div class="card" data-aos="zoom-in" @click.prevent="$dispatch('open-modal', project)" style="cursor: pointer;">
-                            <div class="title-p" >
-                                <h4  x-text="project.name"></h4>
-                                <span class="view-project-trigger">
-                                    Voir le projet <i class="fa-solid fa-arrow-right"></i>
-                                </span>
+    
 
-                            </div>
-                            <img :src="project.image" alt="image">
-                        </div>
-                    </template>
+    <div class="portfolio-tabs-bt">
+        <button :class="{active: activeTab === 'annee1'}" @click="activeTab = 'annee1'">1ère année</button>
+        <button :class="{active: activeTab === 'stage1'}" @click="activeTab = 'stage1'">Stage 1ère année</button>
+        <button :class="{active: activeTab === 'annee2'}" @click="activeTab = 'annee2'">2ème année</button>
+        <button :class="{active: activeTab === 'stage2'}" @click="activeTab = 'stage2'">Stage 2ème année</button>
+    </div>
+
+
+    <!-- 1ère année -->
+<div x-show="activeTab === 'annee1'">
+    <h2>1ère année de BTS SIO</h2>
+    <div class="cards-container">
+        <template x-for="project in getProjectsByDate(1)" :key="project.id">
+            <div class="card" @click.prevent="$dispatch('open-modal', project)">
+                <div class="title-p">
+                    <h4 x-text="project.name"></h4>
+                    <span class="view-project-trigger">
+                        Voir le projet <i class="fa-solid fa-arrow-right"></i>
+                    </span>
                 </div>
-
-                <div class="separator-design">
-                    <div class="separator-square"></div>
-                </div>
+                <img :src="project.image" alt="image">
             </div>
-            <div>
-                <h2>Stage de 1ère année de BTS SIO</h2> 
+        </template>
+    </div>
+</div>
 
-                <div class="cards-container">
-                    <template x-for="project in getProjectsByDate(2)" :key="project.id">
-                        <div class="card" data-aos="zoom-in" @click.prevent="$dispatch('open-modal', project)" style="cursor: pointer;">
-                            <div class="title-p" >
-                                <h4  x-text="project.name"></h4>
-                                <span class="view-project-trigger">
-                                    Voir le projet <i class="fa-solid fa-arrow-right"></i>
-                                </span>
+<!-- Stage 1ère année -->
+<div x-show="activeTab === 'stage1'">
+    <h2>Stage de 1ère année de BTS SIO</h2>
 
-                            </div>
-                            <img :src="project.image" alt="image">
-                        </div>
-                    </template>
+    <div class="cards-container">
+        <template x-for="project in getProjectsByDate(2)" :key="project.id">
+            <div class="card" @click.prevent="$dispatch('open-modal', project)">
+                <div class="title-p">
+                    <h4 x-text="project.name"></h4>
+                    <span class="view-project-trigger">
+                        Voir le projet <i class="fa-solid fa-arrow-right"></i>
+                    </span>
                 </div>
-
-                <div class="separator-design">
-                    <div class="separator-square"></div>
-                </div>
+                <img :src="project.image" alt="image">
             </div>
-            <div>
-                <h2>2ème année de BTS SIO</h2> 
+        </template>
+    </div>
+</div>
 
-                <div class="cards-container">
-                    <template x-for="project in getProjectsByDate(2)" :key="project.id">
-                        <div class="card" data-aos="zoom-in" @click.prevent="$dispatch('open-modal', project)" style="cursor: pointer;">
-                            <div class="title-p" >
-                                <h4  x-text="project.name"></h4>
-                                <span class="view-project-trigger">
-                                    Voir le projet <i class="fa-solid fa-arrow-right"></i>
-                                </span>
+<!-- 2ème année -->
+<div x-show="activeTab === 'annee2'">
+    <h2>2ème année de BTS SIO</h2>
 
-                            </div>
-                            <img :src="project.image" alt="image">
-                        </div>
-                    </template>
+    <div class="cards-container">
+        <template x-for="project in getProjectsByDate(3)" :key="project.id">
+            <div class="card" @click.prevent="$dispatch('open-modal', project)">
+                <div class="title-p">
+                    <h4 x-text="project.name"></h4>
+                    <span class="view-project-trigger">
+                        Voir le projet <i class="fa-solid fa-arrow-right"></i>
+                    </span>
                 </div>
-
-                <div class="separator-design">
-                    <div class="separator-square"></div>
-                </div>
+                <img :src="project.image" alt="image">
             </div>
-            <div>
-                <h2>Stage de 2ème année de BTS SIO</h2> 
+        </template>
+    </div>
+</div>
 
-                <div class="cards-container">
-                    <template x-for="project in getProjectsByDate(2)" :key="project.id">
-                        <div class="card" data-aos="zoom-in" @click.prevent="$dispatch('open-modal', project)" style="cursor: pointer;">
-                            <div class="title-p" >
-                                <h4  x-text="project.name"></h4>
-                                <span class="view-project-trigger">
-                                    Voir le projet <i class="fa-solid fa-arrow-right"></i>
-                                </span>
+<!-- Stage 2ème année -->
+<div x-show="activeTab === 'stage2'">
+    <h2>Stage de 2ème année de BTS SIO</h2>
 
-                            </div>
-                            <img :src="project.image" alt="image">
-                        </div>
-                    </template>
+    <div class="cards-container">
+        <template x-for="project in getProjectsByDate(4)" :key="project.id">
+            <div class="card" @click.prevent="$dispatch('open-modal', project)">
+                <div class="title-p">
+                    <h4 x-text="project.name"></h4>
+                    <span class="view-project-trigger">
+                        Voir le projet <i class="fa-solid fa-arrow-right"></i>
+                    </span>
                 </div>
-
-                <div class="separator-design">
-                    <div class="separator-square"></div>
-                </div>
+                <img :src="project.image" alt="image">
             </div>
+        </template>
+    </div>
+</div>
+
+</div>
             
             <div class="table-responsive-wrapper" x-data="{
                 project: [],
@@ -255,8 +257,8 @@
             }
         }">
         <div class="tabs-bt">
-            <button class="btn" id="bt-skills" @click="toggle('skills')" :class="skills ? 'btn-primary' : '' " > Skills </button>
-            <button class="btn" id="bt-about" @click="toggle('about')" :class="about ? 'btn-primary' : '' "> About </button>
+            <button class="btn" id="bt-skills" @click="toggle('skills')" :class="skills ? 'btn-primary' : '' " > Compétences </button>
+            <button class="btn" id="bt-about" @click="toggle('about')" :class="about ? 'btn-primary' : '' "> A propos </button>
         </div>
 
             <div class="skills-container" x-show="skills" x-data="{ office:true, txtOffice:false, virtualBox:true, txtVB:false, sql:true, txtSQL:false, open:false,
@@ -401,6 +403,80 @@
         </div>
     </section>
 
+    <section id="veille">
+        <div class="title-veille">
+            <h1>Veille Technologique</h1>
+        </div>
+        <div class="container">
+            
+            <div class="cards-container">
+
+                <!-- Carte 1 : JSON et API -->
+                <div class="card">
+                    <h2>JSON est-il toujours le meilleur format pour les API modernes ?</h2>
+                    <p><strong>Introduction :</strong> Les API sont essentielles pour la communication entre applications. JSON (JavaScript Object Notation) est aujourd’hui le format le plus utilisé pour échanger des données grâce à sa simplicité et sa compatibilité avec de nombreux langages.</p>
+                </div>
+
+                <!-- Carte 2 : Article sur l'utilisation de JSON -->
+                <div class="card">
+                    <h2>Qu’est-ce que JSON ?</h2>
+                    <p>JSON est un format de données léger basé sur la syntaxe de JavaScript. Il organise les informations sous forme de paires clé-valeur et est lisible par les humains comme par les machines.</p>
+                </div>
+
+                <!-- Carte 3 : Limites de JSON -->
+                <div class="card">
+                    <h2>Pourquoi JSON est populaire</h2>
+                    <ul>
+                        <li><p>Format simple et lisible</p></li>
+                        <li><p>Facile à utiliser avec JavaScript</p></li>
+                        <li><p>Compatible avec la majorité des langages</p></li>
+                        <li><p>Très utilisé dans les API web</p></li>
+                    </ul>
+                </div>
+
+                <!-- Carte 4 : Vidéo explicative -->
+                <div class="card">
+                    <h2>JSON dans les API modernes</h2>
+                    <p>Les API REST utilisent JSON pour envoyer des données entre le client et le serveur.
+                    Exemple : une application demande des données → le serveur renvoie du JSON → le client affiche les informations</p>
+                </div>
+
+                <div class="card">
+                    <h2>Quand JSON peut être limité ?</h2>
+                    <ul>
+                        <li><p><strong>Taille</strong> : fichiers volumineux pour de grandes données</p></li>
+                        <li><p><strong>Performance</strong> : moins rapide que certains formats binaires pour de nombreuses requêtes</p></li>
+                        <li><p><strong>Validation</strong> : binaire, rapide, compact, moins courant</p></li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h2>Formats concurrents</h2>
+                    <ul>
+                        <li><p><strong>XML</strong> : plus lourd mais structure stricte</p></li>
+                        <li><p><strong>Protocol Buffers (Google)</strong> : binaire, rapide, compact, moins lisible</p></li>
+                        <li><p><strong>MessagePack</strong> : structure et types non stricts</p></li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h2>JSON : toujours le standard ?</h2>
+                    <p>JSON reste le standard des API web modernes grâce à sa simplicité et sa compatibilité. Cependant, pour les systèmes très performants, les formats binaires comme Protocol Buffers ou MessagePack peuvent être préférés.</p>
+                </div>
+                
+                <div class="card">
+                    <h2>Sources</h2>
+                    <button class="btn"><a href="https://jsonutils.org/blog/json-vs-xml-comparison.html">JSON Utils – JSON vs XML Comparison</a></button>
+                    <button class="btn"><a href="https://www.digitalapi.ai/blogs/json-vs-xml-for-web-apis-choosing-the-right-data-format">DigitalAPI – JSON vs XML for Web APIs</a></button>
+                    <button class="btn"><a href="https://www.json.org/json-fr.html">JSON.org - documentation officielle</a></button>
+                    <button class="btn"><a href="https://youtu.be/MEN-SAsajSg?si=SC-HcYJXJVkx5gJD">YouTube - JSON : Enfin une explication claire (en 5 min)</a></button>
+
+                </div>
+
+            </div>
+        </div>
+</section>
+
     <section id="form">
         <div class="container">
             <div class="title-form">
@@ -412,28 +488,28 @@
         </div>
     </section>
 
-    <section>
+    <section class="ascii-art">
         <pre>
-                                                ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣾⠆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-                                                ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢶⣶⡶⡴⢦⣼⣟⣻⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-                                                ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⣿⡳⣋⡿⣦⡲⣺⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-                                                ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⠀⠸⣼⣸⠟⠀⠛⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-                                                ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣿⣽⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣠⣦⠀⠀⠀
-                                                ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⣷⣿⢷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣴⣿⢿⢯⣯⡀⠀⠀
-                                                ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣿⣟⢎⣾⢻⡆⠀⠀⠀⠀⠀⠀⠀⢀⡼⢻⢛⣏⣯⢽⡿⡿⣻⡻⣤⡀
-                                                ⠀⠀⠀⠀⠀⠀⠀⣾⣿⣶⣆⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⠃⣕⠙⢧⣽⢸⣯⠀⡀⠀⠀⠀⠀⠀⠘⢯⣡⣂⣹⣎⡾⠀⠑⠛⠛⠉⠁
-                                                ⠀⠀⠀⠀⠀⠀⠀⠹⣷⣾⡟⣿⠻⢦⣠⠄⠀⡄⢀⣠⣴⣶⣹⣿⣿⢧⣦⣽⣿⣿⣺⠣⣄⣀⡀⠀⠀⠀⠐⣻⡿⡿⣿⢧⡆⠀⠀⠀⠀⠀
-                                                ⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿⣗⡒⠷⢦⣝⣶⣾⣟⡭⢶⣋⣲⡿⡿⠏⡿⢻⠿⠇⢹⣎⠻⡻⣳⢿⣷⣄⠀⢸⣃⢼⡐⣇⡷⢯⣆⠀⠀⠀⠀
-                                                ⠀⣴⣦⣄⡀⠀⠀⠀⢈⣿⠿⢷⠶⠾⠿⣿⡿⠿⣥⣬⣭⣿⣷⠇⠀⠁⡼⠆⡰⣸⠿⣦⣷⣿⡺⠿⠿⠂⠘⠻⢾⡵⣿⡷⣞⣿⡄⠀⠀⠀
-                                                ⠀⣷⡿⣿⣿⣤⠀⠀⢨⣯⢘⠆⡖⡪⣻⣿⣻⡂⢄⣑⢆⣻⡇⠀⠀⠀⠻⣷⣧⣯⠾⠋⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠃⠀⠀⠀
-                                                ⠀⡿⣿⣿⠻⣿⣷⡀⠀⠛⢷⣮⣼⠞⠋⡟⠸⣒⡈⢢⣱⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-                                                ⠀⣿⣿⠯⣍⣳⡈⢷⡀⠆⠀⠉⠁⠀⠀⠀⠀⠙⠛⠛⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-                                                ⣰⣾⠻⠷⣶⣭⣹⣤⢗⣮⡰⣃⣤⣤⣤⣤⣤⢤⣤⣄⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-                                                ⣿⠅⣾⢉⣁⣈⣙⣻⣿⣿⣟⡶⠲⢶⡛⢭⣿⣟⣿⣿⡿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-                                                ⣿⣮⣥⠊⢡⡔⣮⣿⣿⣧⠉⢻⣷⣦⡍⣿⣿⣷⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-                                                ⠈⠻⣷⣮⠷⠛⢹⠏⣷⡌⢢⣀⣫⢝⣿⠿⠟⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-                                                ⠀⠀⠀⠀⠀⠀⠋⠀⣹⣡⠈⡎⢫⣲⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-                                                ⠀⠀⠀⠀⠀⠀⠀⠀⠘⠿⣲⣿⠿⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣾⠆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢶⣶⡶⡴⢦⣼⣟⣻⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⣿⡳⣋⡿⣦⡲⣺⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⠀⠸⣼⣸⠟⠀⠛⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣿⣽⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣠⣦⠀⠀⠀
+                ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⣷⣿⢷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣴⣿⢿⢯⣯⡀⠀⠀
+                ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣿⣟⢎⣾⢻⡆⠀⠀⠀⠀⠀⠀⠀⢀⡼⢻⢛⣏⣯⢽⡿⡿⣻⡻⣤⡀
+                ⠀⠀⠀⠀⠀⠀⠀⣾⣿⣶⣆⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⠃⣕⠙⢧⣽⢸⣯⠀⡀⠀⠀⠀⠀⠀⠘⢯⣡⣂⣹⣎⡾⠀⠑⠛⠛⠉⠁
+                ⠀⠀⠀⠀⠀⠀⠀⠹⣷⣾⡟⣿⠻⢦⣠⠄⠀⡄⢀⣠⣴⣶⣹⣿⣿⢧⣦⣽⣿⣿⣺⠣⣄⣀⡀⠀⠀⠀⠐⣻⡿⡿⣿⢧⡆⠀⠀⠀⠀⠀
+                ⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿⣗⡒⠷⢦⣝⣶⣾⣟⡭⢶⣋⣲⡿⡿⠏⡿⢻⠿⠇⢹⣎⠻⡻⣳⢿⣷⣄⠀⢸⣃⢼⡐⣇⡷⢯⣆⠀⠀⠀⠀
+                ⠀⣴⣦⣄⡀⠀⠀⠀⢈⣿⠿⢷⠶⠾⠿⣿⡿⠿⣥⣬⣭⣿⣷⠇⠀⠁⡼⠆⡰⣸⠿⣦⣷⣿⡺⠿⠿⠂⠘⠻⢾⡵⣿⡷⣞⣿⡄⠀⠀⠀
+                ⠀⣷⡿⣿⣿⣤⠀⠀⢨⣯⢘⠆⡖⡪⣻⣿⣻⡂⢄⣑⢆⣻⡇⠀⠀⠀⠻⣷⣧⣯⠾⠋⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠃⠀⠀⠀
+                ⠀⡿⣿⣿⠻⣿⣷⡀⠀⠛⢷⣮⣼⠞⠋⡟⠸⣒⡈⢢⣱⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                ⠀⣿⣿⠯⣍⣳⡈⢷⡀⠆⠀⠉⠁⠀⠀⠀⠀⠙⠛⠛⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                ⣰⣾⠻⠷⣶⣭⣹⣤⢗⣮⡰⣃⣤⣤⣤⣤⣤⢤⣤⣄⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                ⣿⠅⣾⢉⣁⣈⣙⣻⣿⣿⣟⡶⠲⢶⡛⢭⣿⣟⣿⣿⡿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                ⣿⣮⣥⠊⢡⡔⣮⣿⣿⣧⠉⢻⣷⣦⡍⣿⣿⣷⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                ⠈⠻⣷⣮⠷⠛⢹⠏⣷⡌⢢⣀⣫⢝⣿⠿⠟⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                ⠀⠀⠀⠀⠀⠀⠋⠀⣹⣡⠈⡎⢫⣲⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                ⠀⠀⠀⠀⠀⠀⠀⠀⠘⠿⣲⣿⠿⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
                                                 
 
         </pre>
@@ -526,7 +602,6 @@
                     </div>
                     <div class="info-footer">
                         <a :href="activeProject?.link" target="_blank" class="custom-btn-primary">Ouvrir le projet</a>
-                        <button @click="open = false" class="custom-btn-outline">Fermer</button>
                     </div>
                 </div>
 

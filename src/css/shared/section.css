@@ -34,6 +34,7 @@
       flex-wrap: wrap;
       max-width: 1054px;
       justify-content: center;
+      min-height: 400px;
     }
   }
 }
@@ -302,6 +303,81 @@
         border-radius: 12px;
         border: 2px solid black;
       }
+    }
+  }
+}
+
+#veille{
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* centre les cartes */
+    width: 100%;             /* assure que le container prend toute la largeur */
+    box-sizing: border-box;
+    text-align: center;  /* inclus padding/border dans la largeur */
+    
+    .card {
+        min-height: 260px;     /* minimum 500px de hauteur */
+        max-height: 500px;     /* limite max pour ne pas exploser */
+        overflow-y: auto;      /* scroll seulement si plus grand que max */
+        padding: 20px;
+        background: var(--three);
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        flex: 0 0 350px;
+        box-sizing: border-box;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+      .card h2{
+          font-size:1.2rem;
+          margin-bottom:10px;
+      }
+
+      .card p, .card ul{
+          font-size:0.95rem;
+          margin-bottom:10px;
+      }
+
+      .card ul{
+          padding-left:20px;
+      }
+
+      .card .btn{
+          display:inline-block;
+          padding:8px 16px;
+          background:var(--four);
+          color:black;
+          text-decoration:none;
+          border-radius:6px;
+          transition: background 0.2s;
+      }
+
+      .card .btn:hover{
+          background:var(--six);
+      }
+
+      .card::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .card::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+    }
+
+    .card::-webkit-scrollbar-thumb {
+        background: var(--one);
+        border-radius: 10px;
+    }
+
+    .card::-webkit-scrollbar-thumb:hover {
+        background:var(--six);
     }
   }
 }
