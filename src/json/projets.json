@@ -126,7 +126,7 @@
             "name": "La Plantation",
             "description": "Ce projet est un site e-commerce dans lequel j'ai ajouté une notion de colisage pour les articles coté admin et client", 
             "date": "4",
-            "image": "../src/img/laplantation.png",
+            "image": "../src/img/laplantation.PNG",
             "gallery": [
                 "src/img/colisage1.png",
                 "src/img/colisage2.png", 
@@ -152,7 +152,7 @@
             "name": "Geripro",
             "description": "Ce projet est un site de gestion d'entreprise dans laquelle j'ai ajouté un module de demande de remboursement pour les salarie et une gestion des demandes ainsi qu'une gestion de messages types pour l'administration", 
             "date": "4",
-            "image": "../src/img/fg.png",
+            "image": "../src/img/fg.PNG",
             "gallery": [
                 "src/img/fg1.png",
                 "src/img/fg2.png", 
