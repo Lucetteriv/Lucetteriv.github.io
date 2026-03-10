@@ -7,9 +7,7 @@
             "date": "2",
             "image": "../src/img/snake.PNG",
             "gallery": [
-                "https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png",
-                "https://i0.wp.com/picjumbo.com/wp-content/uploads/silhouettes-of-hawaiian-palms-at-a-gorgeous-sunset-free-image.jpeg?h=800&quality=80",
-                "https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png"
+                "../src/img/snake.PNG"
             ],
             "link": "https://github.com/Lucetteriv/Snake",
             "skills": 
@@ -201,10 +199,9 @@
             "date": "2",
             "image": "../src/img/portfolio.png",
             "gallery": [
-                "src/img/cahier_des_charges_lmev_2.png",
-                "src/img/cahier_des_charges_lmev_1.png"
+                "../src/img/portfolio.png"
             ],
-            "link": "https://github.com/Lucetteriv/CrazyQuizzJS",
+            "link": "https://lucetteriv.github.io/",
             "skills": 
             {
                "skill1": true ,
