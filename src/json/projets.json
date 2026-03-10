@@ -197,7 +197,7 @@
             "name": "Portfolio",
             "description": "Ce projet est un site e-commerce realiser entierement en HTML/CSS avec l'aide de bootstrap ", 
             "date": "2",
-            "image": "../src/img/portfolio.png",
+            "image": "../src/img/portfolio.PNG",
             "gallery": [
                 "../src/img/portfolio.png"
             ],
