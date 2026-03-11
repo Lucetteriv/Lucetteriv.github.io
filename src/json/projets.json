@@ -75,14 +75,12 @@
             "name": "GestMegots",
             "description": "Ce projet est une application client lourd réalisée en C# qui permet de suivre l'activitée des cendriers publics dans la ville de Laon en gérant les employés, les collectes, les lieux de collectes...", 
             "date": "3",
-                "image": "../src/img/pokemon.png",
+                "image": "../src/img/Capture.png",
             "gallery": [
-                "src/img/booster-connect.PNG", 
-                "src/img/booster-open.PNG", 
-                "src/img/booster-collec.PNG",
-                "src/img/filtre-booster.PNG"
+                "src/img/gestion_hotpspot_gestmegot.png", 
+                "src/img/gestion_materiels_gestmegot.png"
             ],
-            "link": "https://github.com/Lucetteriv/booster-card",
+            "link": "https://lucetteriv.github.io/",
             "skills": 
             {
                 "skill1": true ,
@@ -106,7 +104,7 @@
                 "src/img/interface_diplome_gestemployees.png", 
                 "src/img/interface_service_gestemployees.png"
             ],
-            "link": "https://github.com/Lucetteriv/Snake",
+            "link": "https://lucetteriv.github.io/",
             "skills": 
             {
                 "skill1": false ,
@@ -122,7 +120,7 @@
         {
             "id": "6",
             "name": "La Plantation",
-            "description": "Ce projet est un site e-commerce dans lequel j'ai ajouté une notion de colisage pour les articles coté admin et client", 
+            "description": "Ce projet est un site e-commerce dans lequel j'ai ajouté une notion de colisage pour les articles coté admin et client. Il a été réalisé en PHP avec le framework Synfony ainsi que quelques fonctions JavaScript ", 
             "date": "4",
             "image": "../src/img/laplantation.PNG",
             "gallery": [
@@ -134,7 +132,7 @@
 
 
             ],
-            "link": "https://github.com/Lucetteriv/CrazyQuizzJS",
+            "link": "https://lucetteriv.github.io/",
             "skills": 
             {
                "skill1": false ,
@@ -148,7 +146,7 @@
         {
             "id": "7",
             "name": "Geripro",
-            "description": "Ce projet est un site de gestion d'entreprise dans laquelle j'ai ajouté un module de demande de remboursement pour les salarie et une gestion des demandes ainsi qu'une gestion de messages types pour l'administration", 
+            "description": "Ce projet est un site de gestion d'entreprise dans laquelle j'ai ajouté un module de demande de remboursement pour les salarie et une gestion des demandes ainsi qu'une gestion de messages types pour l'administration. Il a été réalisé en PHP avec le framework Synfony ainsi que quelques fonctions JavaScript", 
             "date": "4",
             "image": "../src/img/fg.PNG",
             "gallery": [
@@ -160,7 +158,7 @@
 
 
             ],
-            "link": "https://github.com/Lucetteriv/CrazyQuizzJS",
+            "link": "https://lucetteriv.github.io/",
             "skills": 
             {
                "skill1": false ,
@@ -181,7 +179,7 @@
                 "src/img/cahier_des_charges_lmev_2.png",
                 "src/img/cahier_des_charges_lmev_1.png"
             ],
-            "link": "https://github.com/Lucetteriv/CrazyQuizzJS",
+            "link": "https://lucetteriv.github.io/",
             "skills": 
             {
                "skill1": true ,
