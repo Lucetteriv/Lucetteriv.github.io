@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Lucie Richard</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="src/js/api.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="src/img/logo.svg" alt="logo">
+            </div>
+            <nav class="nav-menu">
+
+                <ul class="menu">
+                    <li><a href="#projects">Projets</a></li>
+                    <li><a href="#tabs" onclick="document.querySelector('#bt-skills').click()">Compétences</a></li>
+                    <li><a href="#tabs" onclick="document.querySelector('#bt-about').click()">À propos</a></li>
+                    <li><a href="#veille">Veille technologique</a></li>
+                    <li><a href="#form">Me contacter</a></li>
+                </ul>
+
+            </nav>
+            <nav x-data="{open: false}" class="nav-menu-mobile">
+                <span @click="open= !open" class="menu-mobile-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </span>
+
+                <div x-show="open" x-transition class="menu-mobile">
+                    <ul class="menu-mobile-list" x-show="open" @click.away="open = false">
+                        <li ><a @click="open = !open" href="#projects">Projets</a></li>
+                        <li ><a @click="open = !open" href="#tabs" onclick="document.querySelector('#bt-skills').click()">Skills</a></li>
+                        <li ><a @click="open = !open" href="#tabs" onclick="document.querySelector('#bt-about').click()">À propos</a></li>
+                        <li><a href="#veille">Veille technologique</a></li>
+                        <li ><a @click="open = !open" href="#form">Me contacter</a></li>
+                        <li @click="open = !open"><i class="fa-solid fa-xmark fa-2xl"></i></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <div class="title">
+                <h1>Portfolio de Lucie</h1>
+                <p>Développeuse Junior</p>
+                <a href="#projects" class="btn btn-primary"> Mes Projets</a>
+            </div>
+            <div class="container-image">
+                <img src="src/img/photo_lucie-removebg-preview.png" alt="photo de profil">
+                <svg width="373" height="466" viewBox="0 0 373 466" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="path-1-inside-1_24_34" fill="white">
+                    <path d="M186.5 0C210.991 3.21166e-06 235.243 4.82389 257.87 14.1963C280.497 23.5688 301.057 37.3069 318.375 54.625C335.693 71.9431 349.431 92.5027 358.804 115.13C367.729 136.679 372.527 159.701 372.964 183H373V466H0V183H0.0361328C0.473451 159.701 5.27058 136.679 14.1963 115.13C23.5688 92.5027 37.3069 71.9431 54.625 54.625C71.9431 37.3069 92.5027 23.5688 115.13 14.1963C137.757 4.82389 162.009 2.14076e-06 186.5 0Z"/>
+                    </mask>
+                    <path d="M186.5 0C210.991 3.21166e-06 235.243 4.82389 257.87 14.1963C280.497 23.5688 301.057 37.3069 318.375 54.625C335.693 71.9431 349.431 92.5027 358.804 115.13C367.729 136.679 372.527 159.701 372.964 183H373V466H0V183H0.0361328C0.473451 159.701 5.27058 136.679 14.1963 115.13C23.5688 92.5027 37.3069 71.9431 54.625 54.625C71.9431 37.3069 92.5027 23.5688 115.13 14.1963C137.757 4.82389 162.009 2.14076e-06 186.5 0Z" fill="#FEC89A"/>
+                    <path d="M186.5 0V-4V0ZM257.87 14.1963L259.401 10.5008V10.5008L257.87 14.1963ZM318.375 54.625L321.203 51.7966L318.375 54.625ZM358.804 115.13L362.499 113.599V113.599L358.804 115.13ZM372.964 183L368.965 183.075L369.038 187H372.964V183ZM373 183H377V179H373V183ZM373 466V470H377V466H373ZM0 466H-4V470H0V466ZM0 183V179H-4V183H0ZM0.0361328 183V187H3.96176L4.03543 183.075L0.0361328 183ZM14.1963 115.13L10.5008 113.599L10.5008 113.599L14.1963 115.13ZM54.625 54.625L51.7966 51.7966L54.625 54.625ZM115.13 14.1963L113.599 10.5008L113.599 10.5008L115.13 14.1963ZM186.5 0V4C210.466 4 234.198 8.72043 256.339 17.8918L257.87 14.1963L259.401 10.5008C236.288 0.927355 211.517 -4 186.5 -4V0ZM257.87 14.1963L256.339 17.8918C278.481 27.0633 298.6 40.5067 315.547 57.4534L318.375 54.625L321.203 51.7966C303.514 34.1071 282.513 20.0743 259.401 10.5008L257.87 14.1963ZM318.375 54.625L315.547 57.4534C332.493 74.4002 345.937 94.5188 355.108 116.661L358.804 115.13L362.499 113.599C352.926 90.4866 338.893 69.4861 321.203 51.7966L318.375 54.625ZM358.804 115.13L355.108 116.661C363.842 137.747 368.537 160.275 368.965 183.075L372.964 183L376.963 182.925C376.516 159.126 371.617 135.61 362.499 113.599L358.804 115.13ZM372.964 183V187H373V183V179H372.964V183ZM373 183H369V466H373H377V183H373ZM373 466V462H0V466V470H373V466ZM0 466H4V183H0H-4V466H0ZM0 183V187H0.0361328V183V179H0V183ZM0.0361328 183L4.03543 183.075C4.46337 160.275 9.15768 137.747 17.8918 116.661L14.1963 115.13L10.5008 113.599C1.38347 135.61 -3.51647 159.126 -3.96316 182.925L0.0361328 183ZM14.1963 115.13L17.8918 116.661C27.0633 94.5188 40.5067 74.4002 57.4534 57.4534L54.625 54.625L51.7966 51.7966C34.1071 69.4861 20.0743 90.4866 10.5008 113.599L14.1963 115.13ZM54.625 54.625L57.4534 57.4534C74.4002 40.5067 94.5188 27.0633 116.661 17.8918L115.13 14.1963L113.599 10.5008C90.4866 20.0743 69.4861 34.1071 51.7966 51.7966L54.625 54.625ZM115.13 14.1963L116.661 17.8918C138.802 8.72043 162.534 4 186.5 4V0V-4C161.483 -4 136.712 0.927347 113.599 10.5008L115.13 14.1963Z" fill="black" mask="url(#path-1-inside-1_24_34)"/>
+                </svg>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section id="projects">
+        <div x-data="{
+            projects: [],
+            init() {
+                fetch('src/json/projets.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        this.projects = data.projects;
+                    })
+                    .catch(error => console.error('Erreur de chargement:', error));
+            },
+            // Filtre les projets selon la valeur de l'attribut 'date'
+            getProjectsByDate(val) {
+                return this.projects.filter(p => p.date == val);
+            }
+
+            }" class="container">
+
+            <div class="title-projects">
+                <h1>Mes projets</h1>
+                <p>Ici, vous pouvez retrouver mes projets réalisés au cours de mon BTS ainsi que quelques projets personnels.</p>
+            </div>
+            
+            <div x-data="{ activeTab: 'annee1' }">
+
+    
+
+    <div class="portfolio-tabs-bt">
+        <button :class="{active: activeTab === 'annee1'}" @click="activeTab = 'annee1'">1ère année</button>
+        <button :class="{active: activeTab === 'stage1'}" @click="activeTab = 'stage1'">Stage 1ère année</button>
+        <button :class="{active: activeTab === 'annee2'}" @click="activeTab = 'annee2'">2ème année</button>
+        <button :class="{active: activeTab === 'stage2'}" @click="activeTab = 'stage2'">Stage 2ème année</button>
+    </div>
+
+
+    <!-- 1ère année -->
+<div x-show="activeTab === 'annee1'">
+    <h2>1ère année de BTS SIO</h2>
+    <div class="cards-container">
+        <template x-for="project in getProjectsByDate(1)" :key="project.id">
+            <div class="card" @click.prevent="$dispatch('open-modal', project)">
+                <div class="title-p">
+                    <h4 x-text="project.name"></h4>
+                    <span class="view-project-trigger">
+                        Voir le projet <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </div>
+                <img :src="project.image" alt="image">
+            </div>
+        </template>
+    </div>
+</div>
+
+<!-- Stage 1ère année -->
+<div x-show="activeTab === 'stage1'">
+    <h2>Stage de 1ère année de BTS SIO</h2>
+
+    <div class="cards-container">
+        <template x-for="project in getProjectsByDate(2)" :key="project.id">
+            <div class="card" @click.prevent="$dispatch('open-modal', project)">
+                <div class="title-p">
+                    <h4 x-text="project.name"></h4>
+                    <span class="view-project-trigger">
+                        Voir le projet <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </div>
+                <img :src="project.image" alt="image">
+            </div>
+        </template>
+    </div>
+</div>
+
+<!-- 2ème année -->
+<div x-show="activeTab === 'annee2'">
+    <h2>2ème année de BTS SIO</h2>
+
+    <div class="cards-container">
+        <template x-for="project in getProjectsByDate(3)" :key="project.id">
+            <div class="card" @click.prevent="$dispatch('open-modal', project)">
+                <div class="title-p">
+                    <h4 x-text="project.name"></h4>
+                    <span class="view-project-trigger">
+                        Voir le projet <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </div>
+                <img :src="project.image" alt="image">
+            </div>
+        </template>
+    </div>
+</div>
+
+<!-- Stage 2ème année -->
+<div x-show="activeTab === 'stage2'">
+    <h2>Stage de 2ème année de BTS SIO</h2>
+
+    <div class="cards-container">
+        <template x-for="project in getProjectsByDate(4)" :key="project.id">
+            <div class="card" @click.prevent="$dispatch('open-modal', project)">
+                <div class="title-p">
+                    <h4 x-text="project.name"></h4>
+                    <span class="view-project-trigger">
+                        Voir le projet <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </div>
+                <img :src="project.image" alt="image">
+            </div>
+        </template>
+    </div>
+</div>
+
+</div>
+            
+            <div class="table-responsive-wrapper" x-data="{
+                project: [],
+                init() {
+                    fetch('src/json/projets.json')
+                        .then(response => response.json())
+                        .then(data => {
+                            this.projects = data.projects;
+                            
+                            // On attend que Alpine ait fini de dessiner les cartes
+                            this.$nextTick(() => {
+                                AOS.refresh(); 
+                            });
+                        })
+                        .catch(error => console.error('Erreur de chargement:', error));
+                },
+                toggleSkill(Project, skill) {
+
+                    project.skills[skill] = !project.skills[skill];
+                }
+    
+                }" x-init="init()">
+                <table>
+                    <thead>
+                        <tr>
+                        <th>Compétence <br> ------------- <br> Projets</th>
+                        <th>Gérer le patrimoine informatique</th>
+                        <th>Répondre aux incidents et aux demandes d'assistance et d'évolution</th>
+                        <th>Développer la présence en ligne de l'organisation</th>
+                        <th>Travailler en mode projet</th>
+                        <th>Mettre à disposition des utilisateurs un service informatique</th>
+                        <th>Organiser son développement professionnel</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template x-for="project in projects">
+                            <tr>
+                                <th x-text="project.name"></th>
+                                <template x-for="(value, skill) in project.skills" :key="skill">
+                                    <td>
+                                        <input type="checkbox" 
+                                            :id="`${project.id}-${skill}`"
+                                            :checked="value"
+                                            @change="toggleSkill(project, skill)"
+                                            disabled>
+                                        <label :for="`${project.id}-${skill}`" x-text="project.skill1"></label>
+                                    </td>
+                                </template>
+                            </tr>
+                        </template>
+                    </tbody> 
+                </table>
+            </div>
+            
+        </div>
+
+        
+
+    </section>
+
+    <section id="tabs">
+        <div class="container" x-data="{
+            skills: true,
+            about: false,
+            toggle(param) {
+                if (param === 'skills' && !this.skills){
+                    this.skills = !this.skills
+                    this.about = false
+                }
+                else if (param === 'about' && !this.about){
+                    this.about = !this.about
+                    this.skills = false
+                }
+            }
+        }">
+        <div class="tabs-bt">
+            <button class="btn" id="bt-skills" @click="toggle('skills')" :class="skills ? 'btn-primary' : '' " > Compétences </button>
+            <button class="btn" id="bt-about" @click="toggle('about')" :class="about ? 'btn-primary' : '' "> A propos </button>
+        </div>
+
+            <div class="skills-container" x-show="skills" x-data="{ office:true, txtOffice:false, virtualBox:true, txtVB:false, sql:true, txtSQL:false, open:false,
+            toggle2(param){
+                if(param === 'office'){
+                    this.office=true, this.txtOffice=true, this.virtualBox=false, this.txtVB=false, this.sql=false, this.txtSQL=false, this.open=true
+                }
+                if(param === 'virtualBox'){
+                    this.office=false, this.txtOffice=false, this.virtualBox=true, this.txtVB=true, this.sql=false, this.txtSQL=false, this.open=true
+                }
+                if(param === 'sql'){
+                    this.office=false, this.txtOffice=false, this.virtualBox=false, this.txtVB=false, this.sql=true, this.txtSQL=true, this.open=true
+                }
+            },
+            exit(){
+                this.office=true, this.txtOffice=false, this.virtualBox=true, this.txtVB=false, this.sql=true, this.txtSQL=false, this.open=false
+            }}">
+                <div class="grid grid1" data-aos="fade-right">
+                    <div class="it-skills">
+                        <div class="office" x-show="office" @click="toggle2('office')" >
+                            <img src="src/img/pack office.svg">
+                            <p x-show="txtOffice">Maitrise des applications du Pack office tel que Word, PowerPoint ainsi que quelques connaissances sur Excel</p>
+                        </div>
+                        <div class="virtualBox" x-show="virtualBox" @click="toggle2('virtualBox')">
+                            <img src="src/img/virtualBox.svg">
+                            <p x-show="txtVB">Création de machines vituelles Windows et Linux</p>
+                        </div>
+                        <div class="sql" x-show="sql" @click="toggle2('sql')">
+                            <img src="src/img/sql.svg">
+                            <p x-show="txtSQL">Création et gestion d'une base de données SQL</p>
+                        </div>
+                        <span class="open" x-show="open" @click="exit()"><i class="fa-solid fa-xmark fa-2xl"></i></span>
+                    </div>
+                </div>
+                <div class="grid grid2" data-aos="fade-right">
+                    <div class="languages">
+
+                        <img class="lang-en" src="src/img/icons8-anglais-100.png" alt="drapeau anglais">
+
+
+                        <img class="lang-es" src="src/img/icons8-espagne-100.png" alt="drapeau espagne">
+
+
+                        <img class="lang-it" src="src/img/icons8-italie-100.png" alt="drapeau italie">
+
+                    </div>
+                </div>
+                <div class="grid grid3" data-aos="fade-up">
+
+                    <img class="avatar avatar-1" src="src/img/CSS.webp" alt="css">
+
+                    <img class="avatar avatar-2" src="src/img/python.png.png" alt="python">
+
+                    <img class="avatar avatar-3" src="src/img/CSharp.webp" alt="csharp">
+
+                    <img class="avatar avatar-4" src="src/img/JS.webp" alt="javascript">
+
+                    <img class="avatar avatar-5" src="src/img/html.png.png" alt="html">
+
+                </div>
+                <div class="grid grid4" data-aos="fade-left" x-data="{
+                    state: 1,
+                    skill1: true,
+                    skill2: false,
+                    skill3: false,
+                    skill4: false,
+
+                    next(param) {
+                        if(param === 'minus' && this.state != 1) {
+                            this.state--
+                        } else if (param == 'plus' && this.state < 4) {
+                            this.state++
+                        }
+                        console.log(this.state);
+                        if (this.state === 1) {
+                            this.skill1 = true;
+                            this.skill2 = false;
+                            this.skill3 = false;
+                            this.skill4 = false;
+                        } else if (this.state === 2) {
+                            this.skill1 = false;
+                            this.skill2 = true;
+                            this.skill3 = false;
+                            this.skill4 = false;
+                        } else if (this.state === 3) {
+                            this.skill1 = false;
+                            this.skill2 = false;
+                            this.skill3 = true;
+                            this.skill4 = false;
+                        } else if (this.state === 4) {
+                            this.skill1 = false;
+                            this.skill2 = false;
+                            this.skill3 = false;
+                            this.skill4 = true;
+                        }
+                    }
+                }">
+
+                    <div class="soft-skills">
+                        <div class="soft-skill">
+                            <div x-show="skill1" class="soft-skill-item"> <div class="image"><img src="src/img/com.webp" alt="image"></div><span>Bonne communication</span></div>
+                            <div x-show="skill2" class="soft-skill-item"> <div class="image"><img class="idea" src="src/img/idea2.png" alt="image"></div><span>Facilités </br> d'apprentissage</span></div>
+                            <div x-show="skill3" class="soft-skill-item"> <div class="image"><img src="src/img/coop.webp" alt="image"></div><span>Esprit d'équipe</span></div>
+                            <div x-show="skill4" class="soft-skill-item"> <div class="image"><img src="src/img/crea.webp" alt="image"></div><span>Créativité</span></div>
+                        </div>
+                        <div class="up-down">
+                            <span @click="next('minus')">
+                                <i class="fa-solid fa-angle-up"></i>
+                            </span>
+                            <span @click="next('plus')">
+                                <i class="fa-solid fa-angle-down"></i>
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="grid grid5" data-aos="fade-left">
+                    <img src="src/img/smartguy.png" alt="bonhomme intelligent">
+                    <div class="text">
+                        <blockquote id="citation"></blockquote>
+                        <div>
+                            <p id="author"></p>
+                            <button class="btn" type="button" onclick="getQuote()">Citation <i class="fa-solid fa-arrows-rotate"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-container" x-show="about">
+                <div class="about-img">
+
+                </div>
+                <div class="title-about">
+                    <h2>A propos</h2>
+                    <p>Je suis Lucie RICHARD étudiante en <strong>BTS SIO</strong> (Services Informatique aux organisations), je me spécialise dans le développement. <br>
+                    Je suis une personne très <strong>créative</strong> et <strong>autonome</strong> avec des <strong>facilités d'apprentissages</strong>. <br>
+                    Les nouvelles technologies et le développement informatique me passionnent. Je suis curieuse et j'aime me lancer des défis afin d'acquérir de <strong>nouvelles compétences</strong>.<br>
+                    Je cherche à me spécialiser dans le <strong>développement de sites Web</strong>. Je vous invite à explorer mon portfolio et à consulter mes projets. <br>
+                    Contactez-moi pour toute question. <br>
+                    <strong>Merci pour votre visite ! </strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="veille">
+    <div class="veille-title">
+        <h1>Veille Technologique</h1>
+    </div>
+    <div class="veille-grid" id="veille-grid">
+        <!-- Cartes injectées par JS -->
+    </div>
+</section>
+
+<script>
+(function () { /* IIFE : aucune variable ne fuite dans le scope global */
+
+    const ARTICLES = [
+        {
+            tag: "Intro",
+            title: "JSON est-il toujours le meilleur format pour les API modernes ?",
+            intro: "Les API sont essentielles pour la communication entre applications. JSON est aujourd'hui le format le plus utilisé pour échanger des données grâce à sa simplicité et sa compatibilité avec de nombreux langages.",
+            imageUrl: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80",
+            aiPrompt: "Fais un résumé court (2-3 phrases max) et 4 points clés à retenir sur le sujet : JSON comme format standard des API modernes. Réponds UNIQUEMENT en JSON valide, sans backticks ni preamble, avec ce format : {\"resume\":\"...\",\"points\":[\"...\",\"...\",\"...\",\"...\"]}",
+        },
+        {
+            tag: "Définition",
+            title: "Qu'est-ce que JSON ?",
+            intro: "JSON est un format de données léger basé sur la syntaxe de JavaScript. Il organise les informations sous forme de paires clé-valeur, lisible par les humains comme par les machines.",
+            imageUrl: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80",
+            aiPrompt: "Fais un résumé court (2-3 phrases max) et 4 points clés sur la définition et la structure de JSON. Réponds UNIQUEMENT en JSON valide, sans backticks ni preamble, format : {\"resume\":\"...\",\"points\":[\"...\",\"...\",\"...\",\"...\"]}",
+        },
+        {
+            tag: "Popularité",
+            title: "Pourquoi JSON est populaire",
+            intro: "JSON s'est imposé comme format universel grâce à sa légèreté, sa lisibilité et sa compatibilité native avec JavaScript et la majorité des langages modernes.",
+            imageUrl: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80",
+            aiPrompt: "Fais un résumé court (2-3 phrases max) et 4 points clés sur les raisons de la popularité de JSON. Réponds UNIQUEMENT en JSON valide, sans backticks ni preamble, format : {\"resume\":\"...\",\"points\":[\"...\",\"...\",\"...\",\"...\"]}",
+        },
+        {
+            tag: "Usage",
+            title: "JSON dans les API modernes",
+            intro: "Les API REST utilisent JSON pour envoyer des données entre le client et le serveur. Le client envoie une requête, le serveur renvoie du JSON, et le client affiche les informations.",
+            imageUrl: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80",
+            aiPrompt: "Fais un résumé court (2-3 phrases max) et 4 points clés sur l'utilisation de JSON dans les API REST modernes. Réponds UNIQUEMENT en JSON valide, sans backticks ni preamble, format : {\"resume\":\"...\",\"points\":[\"...\",\"...\",\"...\",\"...\"]}",
+        },
+        {
+            tag: "Limites",
+            title: "Quand JSON peut être limité ?",
+            intro: "Malgré sa popularité, JSON présente des faiblesses pour les systèmes à haute performance : taille des fichiers, vitesse de parsing et absence de types stricts.",
+            imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+            aiPrompt: "Fais un résumé court (2-3 phrases max) et 4 points clés sur les limites de JSON pour les systèmes à haute performance. Réponds UNIQUEMENT en JSON valide, sans backticks ni preamble, format : {\"resume\":\"...\",\"points\":[\"...\",\"...\",\"...\",\"...\"]}",
+        },
+        {
+            tag: "Alternatives",
+            title: "Formats concurrents à JSON",
+            intro: "Face aux limitations de JSON, d'autres formats émergent : XML pour sa rigueur, Protocol Buffers de Google pour la performance binaire, et MessagePack pour un équilibre compact.",
+            imageUrl: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80",
+            aiPrompt: "Fais un résumé court (2-3 phrases max) et 4 points clés sur les alternatives à JSON : XML, Protocol Buffers, MessagePack. Réponds UNIQUEMENT en JSON valide, sans backticks ni preamble, format : {\"resume\":\"...\",\"points\":[\"...\",\"...\",\"...\",\"...\"]}",
+        },
+        {
+            tag: "Conclusion",
+            title: "JSON : toujours le standard ?",
+            intro: "JSON reste le standard des API web modernes grâce à sa simplicité et sa compatibilité universelle. Pour les systèmes très performants, des formats binaires peuvent être préférés.",
+            imageUrl: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=800&q=80",
+            aiPrompt: "Fais un résumé court (2-3 phrases max) et 4 points clés sur l'avenir de JSON comme standard des API. Réponds UNIQUEMENT en JSON valide, sans backticks ni preamble, format : {\"resume\":\"...\",\"points\":[\"...\",\"...\",\"...\",\"...\"]}",
+        }
+    ];
+
+    const SOURCES = [
+        { label: "JSON Utils – JSON vs XML Comparison", url: "https://jsonutils.org/blog/json-vs-xml-comparison.html" },
+        { label: "DigitalAPI – JSON vs XML for Web APIs", url: "https://www.digitalapi.ai/blogs/json-vs-xml-for-web-apis-choosing-the-right-data-format" },
+        { label: "JSON.org – Documentation officielle", url: "https://www.json.org/json-fr.html" },
+        { label: "YouTube – JSON expliqué en 5 min", url: "https://youtu.be/MEN-SAsajSg?si=SC-HcYJXJVkx5gJD" }
+    ];
+
+    function skeletonCard(article, index) {
+        const div = document.createElement('div');
+        div.className = 'veille-card';
+        div.id = 'veille-card-' + index;
+        div.innerHTML = `
+            <img class="veille-card__img"
+                 src="${article.imageUrl}"
+                 alt="${article.title}"
+                 loading="lazy"
+                 onerror="this.style.display='none'"/>
+            <div class="veille-card__body">
+                <span class="veille-card__tag">${article.tag}</span>
+                <h2 class="veille-card__title">${article.title}</h2>
+                <p class="veille-card__resume">${article.intro}</p>
+                <div class="veille-card__divider"></div>
+                <p class="veille-card__points-label">Points clés</p>
+                <div class="veille-card__loading">
+                    <div class="veille-dot"></div>
+                    <div class="veille-dot"></div>
+                    <div class="veille-dot"></div>
+                    <span>Analyse en cours…</span>
+                </div>
+            </div>`;
+        return div;
+    }
+
+    function sourcesCard() {
+        const links = SOURCES.map(s =>
+            `<a class="veille-source-btn" href="${s.url}" target="_blank" rel="noopener">
+                <span class="veille-source-btn__label">${s.label}</span>
+                <span class="veille-source-btn__arrow">↗</span>
+             </a>`
+        ).join('');
+        const div = document.createElement('div');
+        div.className = 'veille-card';
+        div.innerHTML = `
+            <div class="veille-card__body">
+                <span class="veille-card__tag">Sources</span>
+                <h2 class="veille-card__title">Références &amp; ressources</h2>
+                <div class="veille-sources-list">${links}</div>
+            </div>`;
+        return div;
+    }
+
+    function updateCard(index, article, aiData) {
+        const card = document.getElementById('veille-card-' + index);
+        if (!card) return;
+
+        const imgUrl = article.imageUrl;
+
+        let pointsHtml = '';
+        if (aiData && Array.isArray(aiData.points) && aiData.points.length) {
+            const items = aiData.points.map(p => `<li>${p}</li>`).join('');
+            pointsHtml = `
+                <div class="veille-card__divider"></div>
+                <p class="veille-card__points-label">Points clés</p>
+                <ul class="veille-card__points">${items}</ul>`;
+        }
+
+        const resume = (aiData && aiData.resume) ? aiData.resume : article.intro;
+
+        card.innerHTML = `
+            <img class="veille-card__img"
+                 src="${imgUrl}"
+                 alt="${article.title}"
+                 loading="lazy"
+                 onerror="this.style.display='none'"/>
+            <div class="veille-card__body">
+                <span class="veille-card__tag">${article.tag}</span>
+                <h2 class="veille-card__title">${article.title}</h2>
+                <p class="veille-card__resume">${resume}</p>
+                ${pointsHtml}
+            </div>`;
+    }
+
+    async function fetchSummary(article) {
+        try {
+            const res = await fetch("https://api.anthropic.com/v1/messages", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    model: "claude-sonnet-4-20250514",
+                    max_tokens: 400,
+                    messages: [{ role: "user", content: article.aiPrompt }]
+                })
+            });
+            const data = await res.json();
+            const text = data.content.map(i => i.text || "").join("");
+            return JSON.parse(text.replace(/```json|```/g, "").trim());
+        } catch (e) {
+            return null;
+        }
+    }
+
+    async function init() {
+        const grid = document.getElementById('veille-grid');
+        if (!grid) return;
+
+        ARTICLES.forEach((article, i) => grid.appendChild(skeletonCard(article, i)));
+        grid.appendChild(sourcesCard());
+
+        ARTICLES.forEach(async (article, i) => {
+            const aiData = await fetchSummary(article);
+            updateCard(i, article, aiData);
+        });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+
+})();
+</script>
+
+    <section id="form">
+        <div class="container">
+            <div class="title-form">
+                <h1>Me contacter</h1>
+                <p>Ici, vous trouverez mes coordonnées pour me contacter</p>
+            </div>
+
+            <a href="mailto:com.lucie.ri@gmail.com"> com.lucie.ri@gmail.com </a>
+        </div>
+    </section>
+
+    <section class="ascii-art">
+        <pre>
+                ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣾⠆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢶⣶⡶⡴⢦⣼⣟⣻⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⣿⡳⣋⡿⣦⡲⣺⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⠀⠸⣼⣸⠟⠀⠛⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣿⣽⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣠⣦⠀⠀⠀
+                ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⣷⣿⢷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣴⣿⢿⢯⣯⡀⠀⠀
+                ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣿⣟⢎⣾⢻⡆⠀⠀⠀⠀⠀⠀⠀⢀⡼⢻⢛⣏⣯⢽⡿⡿⣻⡻⣤⡀
+                ⠀⠀⠀⠀⠀⠀⠀⣾⣿⣶⣆⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⠃⣕⠙⢧⣽⢸⣯⠀⡀⠀⠀⠀⠀⠀⠘⢯⣡⣂⣹⣎⡾⠀⠑⠛⠛⠉⠁
+                ⠀⠀⠀⠀⠀⠀⠀⠹⣷⣾⡟⣿⠻⢦⣠⠄⠀⡄⢀⣠⣴⣶⣹⣿⣿⢧⣦⣽⣿⣿⣺⠣⣄⣀⡀⠀⠀⠀⠐⣻⡿⡿⣿⢧⡆⠀⠀⠀⠀⠀
+                ⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿⣗⡒⠷⢦⣝⣶⣾⣟⡭⢶⣋⣲⡿⡿⠏⡿⢻⠿⠇⢹⣎⠻⡻⣳⢿⣷⣄⠀⢸⣃⢼⡐⣇⡷⢯⣆⠀⠀⠀⠀
+                ⠀⣴⣦⣄⡀⠀⠀⠀⢈⣿⠿⢷⠶⠾⠿⣿⡿⠿⣥⣬⣭⣿⣷⠇⠀⠁⡼⠆⡰⣸⠿⣦⣷⣿⡺⠿⠿⠂⠘⠻⢾⡵⣿⡷⣞⣿⡄⠀⠀⠀
+                ⠀⣷⡿⣿⣿⣤⠀⠀⢨⣯⢘⠆⡖⡪⣻⣿⣻⡂⢄⣑⢆⣻⡇⠀⠀⠀⠻⣷⣧⣯⠾⠋⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠃⠀⠀⠀
+                ⠀⡿⣿⣿⠻⣿⣷⡀⠀⠛⢷⣮⣼⠞⠋⡟⠸⣒⡈⢢⣱⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                ⠀⣿⣿⠯⣍⣳⡈⢷⡀⠆⠀⠉⠁⠀⠀⠀⠀⠙⠛⠛⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                ⣰⣾⠻⠷⣶⣭⣹⣤⢗⣮⡰⣃⣤⣤⣤⣤⣤⢤⣤⣄⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                ⣿⠅⣾⢉⣁⣈⣙⣻⣿⣿⣟⡶⠲⢶⡛⢭⣿⣟⣿⣿⡿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                ⣿⣮⣥⠊⢡⡔⣮⣿⣿⣧⠉⢻⣷⣦⡍⣿⣿⣷⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                ⠈⠻⣷⣮⠷⠛⢹⠏⣷⡌⢢⣀⣫⢝⣿⠿⠟⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                ⠀⠀⠀⠀⠀⠀⠋⠀⣹⣡⠈⡎⢫⣲⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                ⠀⠀⠀⠀⠀⠀⠀⠀⠘⠿⣲⣿⠿⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                                                
+
+        </pre>
+    </section>
+    <footer>
+        <div x-data="{ date: new Date()}">
+            <span>&copy;</span><span x-text = "date.getFullYear()"></span><span>, Made with ❤️ by Lucette</span>
+        </div>
+
+        <div class="footer-links">
+            <a href="../src/img/CV-Lucie-Richard.pdf" download="Lucie-Richard-CV.pdf">Télécharger mon CV</a>
+            <a href="mailto:com.lucie.ri@gmail.com"> Me contacter</a>
+        </div>
+
+        <div class="social">
+            <a href="https://www.linkedin.com/in/lucie-richard-44a7912b8" class="fa-brands fa-linkedin fa-lg"></a>
+
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({once:true}); // Initialisation
+    </script>
+
+   <div 
+        x-data="{ 
+            open: false, 
+            activeProject: null, 
+            currentImg: 0,
+            isChanging: false,
+            async changeImg(index) {
+                if (this.isChanging) return;
+                this.isChanging = true; // Début transition
+                
+                setTimeout(() => {
+                    this.currentImg = index;
+                    this.isChanging = false; // Fin transition
+                }, 300); // Doit correspondre à la durée du CSS
+            },
+        }" 
+        @open-modal.window="
+            open = true; 
+            activeProject = $event.detail; 
+            currentImg = 0; 
+        "
+        x-show="open" 
+        x-cloak
+        class="custom-modal-overlay"
+    >
+        <div class="custom-modal-blur" @click="open = false"></div>
+
+        <div class="custom-modal-container">
+            
+            <div class="custom-modal-header">
+                <h3 x-text="activeProject?.name"></h3>
+                <button class="custom-close-btn" @click="open = false">&times;</button>
+            </div>
+
+            <div class="custom-modal-content">
+                
+                <div class="custom-modal-gallery">
+                    <div class="custom-gallery-main">
+                        <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
+                            <div class="custom-gallery-main" style="background: #000; overflow: hidden; height: 100%; display: flex; align-items: center; justify-content: center;">
+    
+                                <template x-if="activeProject">
+                                    <img 
+                                        :src="activeProject.gallery[currentImg]" 
+                                        class="gallery-img-animated"
+                                        :class="{ 'img-hidden': isChanging }"
+                                        alt="Aperçu"
+                                    >
+                                </template>
+
+                                <button class="nav-arrow left" @click="changeImg((currentImg > 0) ? currentImg - 1 : activeProject.gallery.length - 1)">❮</button>
+                                <button class="nav-arrow right" @click="changeImg((currentImg < activeProject.gallery.length - 1) ? currentImg + 1 : 0)">❯</button>
+                            </div>
+                        </div>
+
+                        <div class="gallery-counter">
+                            <span x-text="(currentImg + 1) + ' / ' + activeProject?.gallery.length"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="custom-modal-info">
+                    <div class="info-text">
+                        <h4>Description</h4>
+                        <p x-text="activeProject?.description"></p>
+                    </div>
+                    <div class="info-footer">
+                        <a :href="activeProject?.link" target="_blank" class="custom-btn-primary">Ouvrir le projet</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,218 @@
+{
+    "projects" : [
+        {
+            "id": "1",
+            "name": "Snake Game",
+            "description": "Voici un projet réalisé en C++ qui implémente le jeu classique Snake. Le joueur contrôle un serpent qui grandit à chaque fois qu'il mange de la nourriture, tout en évitant de se mordre lui-même ou de toucher les murs.", 
+            "date": "2",
+            "image": "../src/img/snake.PNG",
+            "gallery": [
+                "../src/img/snake.PNG"
+            ],
+            "link": "https://github.com/Lucetteriv/Snake",
+            "skills": 
+            {
+                "skill1": true ,
+                "skill2": false , 
+                "skill3": false ,
+                "skill4": true , 
+                "skill5": false ,
+                "skill6": false
+            }
+            
+        },
+ 
+
+        {
+            "id": "2",
+            "name": "Pokemon TCG",
+            "description": "Ce projet est une application web qui permet aux utilisateurs de parcourir et de d'ouvrir des booster de cartes Pokémon. L'application utilise l'API PokéAPI pour récupérer les données des cartes et les afficher de manière attrayante.", 
+            "date": "2",
+             "image": "../src/img/pokemon.png",
+            "gallery": [
+                "src/img/booster-connect.PNG", 
+                "src/img/booster-open.PNG", 
+                "src/img/booster-collec.PNG",
+                "src/img/filtre-booster.PNG"
+            ],
+            "link": "https://github.com/Lucetteriv/booster-card",
+           "skills": 
+            {
+                "skill1": false ,
+                "skill2": true , 
+                "skill3": false ,
+                "skill4": true , 
+                "skill5": false ,
+                "skill6": false
+            }
+        },
+
+        {
+            "id": "3",
+            "name": "CrazyQuiz",
+            "description": "Ce projet est un site web de quiz interactif. Les utilisateurs peuvent répondre à une série de questions à choix multiples et obtenir un resultat à la fin. Le site est conçu pour être amusant et éducatif.", 
+            "date": "2",
+            "image": "../src/img/quiz.png",
+            "gallery": [
+                "src/img/quiz-crea.png",
+                "src/img/quiz-prog.png",
+                "src/img/quiz-quest.png",
+                "src/img/quiz-rep.png"
+            ],
+            "link": "https://github.com/Lucetteriv/CrazyQuizzJS",
+            "skills": 
+            {
+                "skill1": false ,
+                "skill2": true , 
+                "skill3": false ,
+                "skill4": true , 
+                "skill5": false,
+                "skill6": false
+            }
+        },
+        {
+            "id": "4",
+            "name": "GestMegots",
+            "description": "Ce projet est une application client lourd réalisée en C# qui permet de suivre l'activitée des cendriers publics dans la ville de Laon en gérant les employés, les collectes, les lieux de collectes...", 
+            "date": "3",
+                "image": "../src/img/Capture.png",
+            "gallery": [
+                "src/img/gestion_hotpspot_gestmegot.png", 
+                "src/img/gestion_materiels_gestmegot.png"
+            ],
+            "link": "https://lucetteriv.github.io/",
+            "skills": 
+            {
+                "skill1": true ,
+                "skill2": true , 
+                "skill3": false ,
+                "skill4": false , 
+                "skill5": true ,
+                "skill6": true
+            }
+        },
+
+       
+        {
+            "id": "5",
+            "name": "GestEmploye",
+            "description": "Voici un projet réalisé en C++ qui implémente le jeu classique Snake. Le joueur contrôle un serpent qui grandit à chaque fois qu'il mange de la nourriture, tout en évitant de se mordre lui-même ou de toucher les murs.", 
+            "date": "1",
+            "image": "../src/img/interface_diplome_gestemployees.png",
+            "gallery": [
+                "src/img/interface_employe_gestemployees.png",
+                "src/img/interface_diplome_gestemployees.png", 
+                "src/img/interface_service_gestemployees.png"
+            ],
+            "link": "https://lucetteriv.github.io/",
+            "skills": 
+            {
+                "skill1": false ,
+                "skill2": false , 
+                "skill3": false ,
+                "skill4": false , 
+                "skill5": true ,
+                "skill6": true
+            }
+            
+        },
+
+        {
+            "id": "6",
+            "name": "La Plantation",
+            "description": "Ce projet est un site e-commerce dans lequel j'ai ajouté une notion de colisage pour les articles coté admin et client. Il a été réalisé en PHP avec le framework Synfony ainsi que quelques fonctions JavaScript ", 
+            "date": "4",
+            "image": "../src/img/laplantation.PNG",
+            "gallery": [
+                "src/img/image1.jpeg",
+                "src/img/image0.jpeg", 
+                "src/img/image2.jpeg",
+                "src/img/image3.jpeg"
+
+
+            ],
+            "link": "https://lucetteriv.github.io/",
+            "skills": 
+            {
+               "skill1": false ,
+                "skill2": true , 
+                "skill3": true ,
+                "skill4": true , 
+                "skill5": true,
+                "skill6": false
+            }
+        },
+        {
+            "id": "7",
+            "name": "Geripro",
+            "description": "Ce projet est un site de gestion d'entreprise dans laquelle j'ai ajouté un module de demande de remboursement pour les salarie et une gestion des demandes ainsi qu'une gestion de messages types pour l'administration. Il a été réalisé en PHP avec le framework Synfony ainsi que quelques fonctions JavaScript", 
+            "date": "4",
+            "image": "../src/img/fg.PNG",
+            "gallery": [
+                "src/img/image11.jpeg",
+                "src/img/image8.jpeg", 
+                "src/img/image5.jpeg",
+                "src/img/image6.jpeg",
+                "src/img/image7.jpeg",
+                "src/img/image13.jpeg",
+                "src/img/image9.jpeg",
+                "src/img/image10.jpeg",
+                "src/img/image12.jpeg"
+                
+
+            ],
+            "link": "https://lucetteriv.github.io/",
+            "skills": 
+            {
+               "skill1": false ,
+                "skill2": true , 
+                "skill3": true ,
+                "skill4": true , 
+                "skill5": true,
+                "skill6": false
+            }
+        },
+        {
+            "id": "8",
+            "name": "Le Monde Est Vache",
+            "description": "Ce projet est un site e-commerce realiser entierement en HTML/CSS avec l'aide de bootstrap ", 
+            "date": "1",
+            "image": "../src/img/LOGO_LMEV.png",
+            "gallery": [
+                "src/img/cahier_des_charges_lmev_2.png",
+                "src/img/cahier_des_charges_lmev_1.png"
+            ],
+            "link": "https://lucetteriv.github.io/",
+            "skills": 
+            {
+               "skill1": true ,
+                "skill2": true , 
+                "skill3": true ,
+                "skill4": true , 
+                "skill5": true,
+                "skill6": true
+            }
+        },
+        {
+            "id": "9",
+            "name": "Portfolio",
+            "description": "Ce projet est un site e-commerce realiser entierement en HTML/CSS avec l'aide de bootstrap ", 
+            "date": "2",
+            "image": "../src/img/portfolio.PNG",
+            "gallery": [
+                "../src/img/portfolio.png"
+            ],
+            "link": "https://lucetteriv.github.io/",
+            "skills": 
+            {
+               "skill1": true ,
+                "skill2": false , 
+                "skill3": true ,
+                "skill4": true , 
+                "skill5": false,
+                "skill6": true
+            }
+        }
+        
+    ]
+}
